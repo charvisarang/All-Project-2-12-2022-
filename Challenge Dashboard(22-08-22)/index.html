@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://kit.fontawesome.com/297e8e88b1.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One&family=Oleo+Script+Swash+Caps&family=Poppins:ital,wght@0,300;1,300&family=Roboto&display=swap"
+        rel="stylesheet">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="main">
+
+        <div class="header">
+            <div class="left-section">
+                <label for="toggleSidebar" ><i class="fa-solid fa-bars"></i>  </label>
+                <h2>TallyScan</h1>
+                <span class="Dash">Dashboard</span>
+            </div>
+    
+            <div class="right-section">
+                <div class="nottification">
+                    <i class="notification fa-regular fa-bell"></i>
+                </div>
+                
+                <div class="user-profile">
+                    <img src="assets/images/nature.jpg" alt="">
+                </div>
+
+                <div class="name-profile"> <h6>John Smith&nbsp;</h6>
+                </div>
+               
+            </div>
+        </div>
+    
+
+
+
+        <div class="section">
+            <input type="checkbox" name="" id="toggleSidebar">
+            <!-- side manu -->
+            <div class="side-menu">
+                <p>General</p>
+                <ul>
+                    <li><i class="icon fa-solid fa-magnifying-glass">&nbsp; &nbsp;</i><span class="text">search</span>
+                    </li>
+                    <li><i class="icon fa-regular fa-bell"></i>&nbsp; &nbsp;<span class="text">alerts</span></li>
+                    <li><i class="icon fa-solid fa-tag"></i>&nbsp; &nbsp;<span class="text">tags</span></li>
+                    <br><br><br><br>
+                    <p>Others</p>
+                    <li><i class="icon fa-solid fa-gear"></i>&nbsp; &nbsp;<span class="text">settings</span></li>
+                    <li><i class="icon fa-regular fa-sun"></i>&nbsp; &nbsp;<span class="text">tips</span></li>
+                    <li><i class="icon fa-solid fa-trash-can"></i>&nbsp; &nbsp;<span class="text">trash</span></li>
+                    <li><i class="icon fa-solid fa-arrow-right-to-bracket"></i>&nbsp; &nbsp;<span class="text">logout</span></li>
+                </ul>
+            </div>
+             <!-- main section -->
+            <div class="container">
+              <!-- search section -->
+                <div class="search">
+                    <input type="text" name="" id="label" onkeyup="searchfun()">
+                    <button class="btn-filter">Filter</button>
+                </div>
+                  <!-- cards -->
+                <div class="row">
+                    <!-- card -->
+                    <div class="card-wrapper">
+                        <div class="card">
+                            <div class="card-details">
+                                <h2>Scan</h2>
+                                <h6>350</h6>
+                            </div>
+                            <div class="icon">
+                                <i class="d-flex fa-solid fa-barcode"></i>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- card -->
+                     <div class="card-wrapper">
+                        <div class="card">
+                            <div class="card-details">
+                                <h2>Scan</h2>
+                                <h6>350</h6>
+                            </div>
+                            <div class="icon">
+                                <i class="d-flex fa-solid fa-barcode"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card -->
+                    <div class="card-wrapper">
+                        <div class="card">
+                            <div class="card-details">
+                                <h2>Scan</h2>
+                                <h6>350</h6>
+                            </div>
+                            <div class="icon">
+                                <i class="d-flex fa-solid fa-barcode"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-wrapper">
+                        <div class="card">
+                            <div class="card-details">
+                                <h2>Scan</h2>
+                                <h6>350</h6>
+                            </div>
+                            <div class="icon">
+                                <i class="d-flex fa-solid fa-barcode"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-wrapper">
+                        <div class="card">
+                            <div class="card-details">
+                                <h2>Scan</h2>
+                                <h6>350</h6>
+                            </div>
+                            <div class="icon">
+                                <i class="d-flex fa-solid fa-barcode"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <h3>Recent Activity</h3>
+                <div class="part3">
+                    <table id="mytable">
+                        <tr>
+                            <th>Item</th>
+                            <th>Date</th>
+                            <th>Type</th>
+                            <th>Est.Cost</th>
+                            <th>Last</th>
+                            <th>List</th>
+                            <th>Auto</th>
+                            <th>Buy Now</th>
+
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

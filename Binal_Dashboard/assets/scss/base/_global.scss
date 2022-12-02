@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ============================================================================HELPER CLASSES */
+/* .logo-icon{
+    font-size: 25px;
+} */
+.cursor-pointer{
+    cursor: pointer;
+}
+.d-flex {
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.nav-icon {
+    font-size: 20px;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.h-150 {
+    height: 150px;
+}
+.overflow-hidden {
+    overflow: hidden;
+}
+
+
+
+.text-orange{
+    color: orange;
+}
+.text-purple{
+    color: purple;
+}
+.text-pink{
+    color: pink;
+}

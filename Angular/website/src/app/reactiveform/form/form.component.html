@@ -1,0 +1,124 @@
+<p>dbdhjb</p>
+<div class="container">
+    <form [formGroup]="loginform" class="form">
+
+        <div class="mb-3">
+            <label>First Name</label>
+            <input type="text" class="form-control" formControlName="firstname">
+            <span
+                *ngIf="loginform.controls['firstname'].invalid && (isSubmitted || loginform.controls['firstname'].touched || loginform.controls['firstname'].dirty)">
+                <span class="text-danger" *ngIf="loginform.controls['firstname'].errors?.['required']">Valid
+                    Input</span>
+                <span class="text-danger" *ngIf="loginform.controls['firstname'].errors?.['required']">Atleast 7 </span>
+            </span>
+        </div>
+
+
+        <div class="mb-3">
+            <label>Middle Name</label>
+            <input type="text" class="form-control" formControlName="middlename">
+            <span
+                *ngIf="loginform.controls['middlename'].invalid && (isSubmitted || loginform.controls['middlename'].touched || loginform.controls['middlename'].dirty)">
+                <span class="text-danger" *ngIf="loginform.controls['middlename'].errors?.['required']">Valid
+                    Input</span>
+                <span class="text-danger" *ngIf="loginform.controls['middlename'].errors?.['required']">Atleast 7
+                </span>
+            </span>
+        </div>
+
+        <div class="mb-3">
+            <label>Last Name</label>
+            <input type="text" class="form-control" formControlName="lastname">
+            <span
+                *ngIf="loginform.controls['lastname'].invalid && (isSubmitted || loginform.controls['lastname'].touched || loginform.controls['lastname'].dirty)">
+                <span class="text-danger" *ngIf="loginform.controls['lastname'].errors?.['required']">Valid Input</span>
+                <span class="text-danger" *ngIf="loginform.controls['lastname'].errors?.['required']">Atleast 7 </span>
+            </span>
+        </div>
+
+        <div class="mb-3">
+            <label>Age</label>
+            <input type="number" class="form-control" formControlName="age">
+            <span
+                *ngIf="loginform.controls['age'].invalid && (isSubmitted || loginform.controls['age'].touched || loginform.controls['age'].dirty)">
+                <span class="text-danger" *ngIf="loginform.controls['age'].errors?.['required']">Valid Input</span>
+                <span class="text-danger" *ngIf="loginform.controls['age'].errors?.['required']">Atleast 7 </span>
+            </span>
+        </div>
+
+        <div class="mb-3">
+            <label>Email</label>
+            <input type="text" class="form-control" formControlName="email">
+            <span
+                *ngIf="loginform.controls['email'].invalid && (isSubmitted || loginform.controls['email'].touched || loginform.controls['email'].dirty)">
+                <span class="text-danger" *ngIf="loginform.controls['email'].errors?.['required']">Valid Input</span>
+                <span class="text-danger" *ngIf="loginform.controls['email'].errors?.['required']">Atleast 7 </span>
+            </span>
+        </div>
+
+        <div class="mb-3">
+            <label>Password</label>
+            <input type="password" class="form-control" formControlName="password">
+            <span
+                *ngIf="loginform.controls['password'].invalid && (isSubmitted || loginform.controls['password'].touched || loginform.controls['password'].dirty)">
+                <span class="text-danger" *ngIf="loginform.controls['password'].errors?.['required']">Valid Input</span>
+                <span class="text-danger" *ngIf="loginform.controls['password'].errors?.['required']">Atleast 7 </span>
+            </span>
+        </div>
+        <div class="mb-3">
+            <label>Mobile Number</label>
+            <input type="number" class="form-control" formControlName="mobilenumber">
+            <span
+                *ngIf="loginform.controls['mobilenumber'].invalid && (isSubmitted || loginform.controls['mobilenumber'].touched || loginform.controls['mobilenumber'].dirty)">
+                <span class="text-danger" *ngIf="loginform.controls['mobilenumber'].errors?.['required']">Valid Input</span>
+                <span class="text-danger" *ngIf="loginform.controls['mobilenumber'].errors?.['required']">Atleast 7 </span>
+            </span>
+        </div>
+        <div class="mb-3 mt-5">
+            <div formGroupName="address">
+                <label>Address</label>
+                <section>
+                    <label>City</label>
+                    <input type="text" class="form-control" formControlName="city">
+                    <span *ngIf="loginform.controls['address'].get('city')?.invalid && (isSubmitted || loginform.controls['address'].get('city')?.touched || loginform.controls['address'].get('city')?.dirty)">
+                        <span class="text-danger" *ngIf="loginform.controls['address'].get('city')?.errors?.['required']">
+                            Please</span>
+                    </span>
+                    
+                </section>
+           
+        
+              
+                <section>
+                    <label>State</label>
+                    <input type="text" class="form-control" formControlName="state">
+                    <span *ngIf="loginform.controls['address'].get('state')?.invalid && (isSubmitted || loginform.controls['address'].get('state')?.touched || loginform.controls['address'].get('state')?.dirty)">
+                        <span class="text-danger" *ngIf="loginform.controls['address'].get('state')?.errors?.['required']">
+                            Please</span>
+                    </span>
+                    
+                </section>
+           
+
+      
+             
+                <section>
+                    <label>ZipCode</label>
+                    <input type="text" class="form-control" formControlName="zipcode">
+                    <span *ngIf="loginform.controls['address'].get('zipcode')?.invalid && (isSubmitted || loginform.controls['address'].get('zipcode')?.touched || loginform.controls['address'].get('zipcode')?.dirty)">
+                        <span class="text-danger" *ngIf="loginform.controls['address'].get('zipcode')?.errors?.['required']">
+                            Please</span>
+                    </span>
+                    
+                </section>
+        
+
+       
+
+            </div>
+
+        </div>
+
+        <button (click)="onSubmit()">Submit</button>
+    </form>
+</div>

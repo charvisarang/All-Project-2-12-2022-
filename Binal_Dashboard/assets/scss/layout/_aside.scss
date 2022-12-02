@@ -1,0 +1,80 @@
+.sidebar {
+    max-width: 220px;
+    flex: 0 0 250px;
+    overflow: hidden;
+}
+
+ .logo {
+    height: 70px;
+    padding: 10px 20px;
+    border-bottom: 1px solid grey;
+    border-right: 1px solid grey;
+    font-size: 25px;
+}
+
+ .logo-text {
+    margin-left: 10px;
+}
+
+ .logo-icon {
+    color: blue;
+}
+
+.icon:hover {
+    color: blue;
+}
+
+/*=============================================================================NAVIGATION-WRAPPER */
+.nav-wrapper {
+    flex-grow: 1;
+    overflow: hidden;
+   
+}
+
+ .nav-title {
+    text-transform: uppercase;
+    padding: 10px 20px;
+    color: grey;
+    font-size: 15px;
+}
+
+ .nav-item {
+    list-style: none;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    font-size: 15px;
+    color: black;
+
+}
+.nav-link{
+    padding: 10px 10px;
+ 
+}
+.nav-item.active .nav-link {
+    border-right: #0c7ffa;
+    background-color: #ecf3fc;
+    color: #0072ea;
+}
+
+
+.nav-item:hover {
+    background-color: rgb(60, 185, 226);
+    color: white;
+}
+
+.nav-item .nav-link:hover {
+    color: white;
+}
+
+.nav-link .nav-text {
+    margin-left: 10px;
+}
+
+/* .nav-item {
+    margin: 20px auto;
+} */
+
+.add {
+    color: lightgray;
+}
+

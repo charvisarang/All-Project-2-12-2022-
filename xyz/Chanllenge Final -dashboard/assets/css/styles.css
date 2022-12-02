@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===============================================================HEADER======================================== */
+/* ===============================================================HEADER======================================== */
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid lightgrey;
+}
+.header-left {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  padding: 15px;
+}
+.header-right {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+.header .image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  overflow: hidden;
+  margin-right: 24px;
+}
+.header .image img {
+  height: auto;
+  max-width: 100%;
+}
+.header h2 {
+  font-size: 25px;
+}
+.header h3 {
+  font-size: 25px;
+  padding-left: 100px;
+}
+.header h4 {
+  margin-right: 20px;
+}
+.header .icon {
+  margin-right: 24px;
+}
+
+/* ===============================================================ASIDE======================================== */
+/* ===============================================================ASIDE======================================== */
+section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+section #togglesidebar {
+  display: none;
+}
+section #togglesidebar:checked + .aside {
+  width: 0;
+  transform: translateX(-200px);
+  transition: 2s;
+}
+section .aside {
+  width: 15%;
+  height: 100%;
+  background-color: ghostwhite;
+}
+section .aside li {
+  list-style: none;
+  padding: 20px 20px;
+}
+section .aside li:hover {
+  cursor: pointer;
+  background-color: rgb(173, 231, 173);
+  color: green;
+  border-left: 2px solid rgb(5, 226, 24);
+}
+section .aside p {
+  padding: 15px;
+}
+section .aside .text {
+  text-transform: capitalize;
+}
+section main {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: lightgray;
+}
+section main .search {
+  display: flex;
+  justify-content: end;
+  margin: 20px;
+}
+section main .btn {
+  background-color: green;
+  color: white;
+  font-size: 25px;
+  border: none;
+  padding: 5px;
+  border-radius: 2px;
+}
+section main .btn:hover {
+  background-color: white;
+  color: green;
+}
+section main .row {
+  flex-wrap: wrap;
+  display: flex;
+}
+section main .card-wrapper {
+  width: 15%;
+  margin: 10px;
+}
+section main .card-wrapper .card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 15px;
+  border-radius: 3px;
+}
+section main .card-wrapper .card:hover {
+  background-color: aquamarine;
+  transition: 2s;
+  transform: scale(1.2);
+}
+section main .card-wrapper .card .content {
+  font-size: 20px;
+}
+section main .card-wrapper .card .icon-wrapper {
+  padding-right: 20px;
+}
+section main .recent {
+  padding: 10px;
+}
+section main .table-format {
+  width: 100%;
+}
+section main .table-format #mytable {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: white;
+  margin-top: 30px;
+  text-align: left;
+  padding: 0 10px;
+}
+section main .table-format #mytable th,
+section main .table-format td {
+  border-bottom: 1px solid grey;
+  padding: 10px;
+}
+section main .table-format th {
+  color: rgb(167, 166, 166);
+  font-size: 20px;
+}
+section main .table-format .badge {
+  border-radius: 20px;
+  padding: 5px;
+}
+section main .table-format .badge-discarded {
+  color: #df9090;
+  background-color: #ffeeed;
+}
+section main .table-format .badge-want {
+  color: #64b975;
+  background-color: #f1fef4;
+}
+section main .table-format .badge-waiting {
+  color: #ea9946;
+  background-color: #fff7e4;
+}
+
+/* ===============================================================MAIN======================================== */
+/* ===============================================================MAIN======================================== */
+/* ==========================================================TABLE==================================================== */
+/* ==========================================================TABLE==================================================== */
+/*==========================================================TABLE Badge==================================================== */
+/* ==========================================================TABLE Badge==================================================== */
+
+/*# sourceMappingURL=styles.css.map */

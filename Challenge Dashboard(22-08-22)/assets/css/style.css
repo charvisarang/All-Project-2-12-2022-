@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    border-bottom: 2px solid grey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* toggle */
+#toggleSidebar {
+    display: none;
+}
+#toggleSidebar:checked+.side-menu {
+    width: 0;
+    transform: translateX(-200px);
+}
+
+/* left section */
+.left-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px;
+}
+
+.Dash{
+    padding-left: 10px;
+    font-size: 30px;
+}
+.left-section label{
+  padding-right: 30px;
+}
+/* right section */
+.right-section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+ padding-right: 20px;
+   
+}
+
+.nottification{
+   padding: 0px 10px;
+}
+.user-profile{
+    margin: 0px 10px;
+}
+
+ .user-profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: red;
+    overflow: hidden;
+} 
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+
+.notification {
+    font-size: 20px;
+}
+
+.notification:hover {
+    color: red;
+}
+
+
+
+/* ===================================================================================================================End Header */
+.section {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(250, 246, 246);
+    display: flex;
+}
+
+.section .side-menu {
+    width: 230px;
+    height: 100%;
+    background-color: white;
+    transition: .25s;
+    z-index: 1;
+
+}
+
+p {
+    text-transform: uppercase;
+    font-size: 16px;
+    padding-left: 20px;
+   padding-top: 30px;
+   padding-bottom: 10px;
+}
+
+.section .side-menu .text {
+    text-transform: capitalize;
+
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 20px;
+    list-style: none;
+    color: gray;
+    height: 50px;
+
+}
+
+li:hover {
+    color: darkgreen;
+    background-color: rgb(134, 202, 134);
+    border-left: 5px solid darkgreen;
+    transform: scale(1.2);
+    transition: .2s;
+}
+
+/* =======================================================================================================================End Section */
+
+.section .container {
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+}
+
+.search{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: end;
+    padding-right: 50px;
+    
+}
+.search input{
+    width: 30%;
+    padding: 5px 20px;
+}
+.search button{
+    padding: 10px;
+    background-color: green;
+}
+ .row{
+     flex-wrap: wrap; 
+    display: flex;
+} 
+
+.card-wrapper{
+    width: 20%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 50px;
+    
+    
+}
+.card{
+    height: 100px;
+    background-color: aqua;
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+}
+
+
+
+.part3{
+   height: 500px;
+   overflow-y: auto;
+}
+
+
+
+
+/* =================================================================================================================================Table */
+.section .container .part3 {
+    width: 100%;
+}
+
+h3 {
+    margin-top: 80px;
+    margin-left: 10px;
+}
+
+#mytable {
+    border-collapse: collapse;
+    margin-left: 10px;
+    margin-top: 10px;
+    text-align: left;
+    width: 100%;
+    background-color: white;
+}
+
+#mytable th,
+td {
+    border-bottom: 1px solid lightgrey;
+}
+
+
+th {
+    padding: 8px;
+    color: rgb(161, 153, 153);
+}
+
+td {
+    font-size: 12px;
+    padding: 10px;
+}
+/* =============================================================================================Badge */
+
+
+.badge{
+    border-radius: 20px;
+    padding: 5px;
+}
+.badge-discarded{
+    color:#df9090;
+    background-color: #ffeeed;
+}
+.badge-want{
+color: #64b975;
+background-color: #f1fef4;
+}
+.badge-waiting{
+color: #ea9946;
+background-color: #fff7e4;
+}
+
+
+
+
+/* =============================================================================================@Media Queries */
+
+@media only screen and (max-width: 1000px) {
+    #mytable {
+        background-color: orange;
+    }
+
+    .section .container .card-wrapper .card {
+        color: aquamarine;
+        background-color: black;
+    }
+
+    .main .section .side-menu .text {
+        display: none;
+    }
+
+    .section .side-menu li{
+        text-align: center;
+        font-size:10px
+    }
+}

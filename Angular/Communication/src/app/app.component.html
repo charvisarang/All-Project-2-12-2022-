@@ -1,0 +1,12 @@
+
+
+<div class="parent">
+    
+     <ul>
+        <li *ngFor="let items of childcolor">{{items}}</li>
+    </ul>
+    <!-- <app-child></app-child> -->
+    <app-child [childcolor]="parentcolor"(newchildcolor)="addColor($event)"></app-child>
+</div>
+<app-stylebinding></app-stylebinding>
+<app-interpolation></app-interpolation>

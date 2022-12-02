@@ -1,0 +1,26 @@
+<p>Hello Login Component From Users Module</p>
+
+<form [formGroup]="mainform">
+
+    
+
+
+<div class="container  d-flex">
+    Enter First Name:<input type="text" name="firstname" placeholder="enter here" formControlName="firstname">
+<span *ngIf="mainform.controls['firstname'].invalid && (isSubmitted  || mainform.controls['firstname'].touched || mainform.controls['firstname'].dirty)">
+    <h6 style="color: red;" *ngIf="mainform.controls['firstname'].errors?.['required']">Plzzz Filll</h6>
+    <!-- <h6 style="color: red;" *ngIf="mainform.controls['firstname'].errors?.['pattern']">Maximum </h6> -->
+</span>
+
+Enter Gender:<input type="text" name="gender" placeholder="enter here" formControlName="gender">
+<span *ngIf="mainform.controls['gender'].invalid && (isSubmitted  || mainform.controls['gender'].touched || mainform.controls['gender'].dirty)">
+    
+    <h6 style="color: red;" *ngIf="mainform.controls['gender'].errors?.['required']">Plzzz Filll</h6>
+    <!-- <h6 style="color: red;" *ngIf="mainform.controls['gender'].errors?.['pattern']">Maximum </h6>  -->
+</span>
+</div>
+
+<button (click)="onAdd()">Add</button>
+<button (click)="onReset()">Reset</button>
+<app-register [studentsdata]="formdata"(godata)='onEdit($event)'></app-register>
+</form> 

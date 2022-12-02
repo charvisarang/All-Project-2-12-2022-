@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+//===========================================================================================LENGTH,PUSH,POP,SHIFT,UNSHIFT==================
+// var array=["Apple","Banana","Cherry","Chickoo","Litchi","Mango","Orange"];
+// console.log(array);
+// console.log(`Array length ${array.length}`);
+
+// var array=["Apple","Banana","Cherry","Chickoo","Litchi","Mango","Orange"];
+// console.log(array.push("Pomegrante"));
+// console.log(array);
+// console.log(`Array lenght ${array.length}`);
+
+// var array=["Apple","Banana","Cherry","Chickoo","Litchi","Mango","Orange"];
+// console.log(`Array Remove ${array.pop()}`);
+
+// var array=["Apple","Banana","Cherry","Chickoo","Litchi","Mango","Orange"];
+// console.log(`Array Remove from First ${array.shift()}`);
+// console.log(array);
+
+// var array=["Apple","Banana","Cherry","Chickoo","Litchi","Mango","Orange"];
+// console.log(`Array Add from First ${array.unshift("charvi")}`);
+// console.log(array);
+
+// console.log("hiiiii");
+// ==========================================================================================================INCLUDES=======================
+// var array=["Apple","Banana","Cherry","Chickoo","Litchi","Mango","Orange"];
+// console.log(array.includes("charvi"));
+
+// const array1=['1','2','3','4','5','6','7','8','9','10'];
+// console.log(array1.includes("10"));
+
+
+//===========================================================================================================CONCAT==========================
+// var a=["a1","a2","a3"];
+// var b=["b1","b2","b3"];
+// var c=["c1","c2","c3"];
+// var d= c.concat(b,a);
+// console.log(d);
+
+//=============================================================================================================FILTER==========================
+// const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+// const result = words.filter(w=> w.length>6);
+// console.log(result);
+
+// const arr=['1','2','3','4','5','6'];
+// const arrfilter=arr.filter(x=>x>3);
+// console.log(arrfilter);
+
+// const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+// const result=words.filter(x=>x.length>6);
+// console.log(result);
+
+
+//=============================================================================================================FIND==========================
+// const array1 = [5, 12, 8, 130, 44];
+// const found = array1.find(value => value > 10);
+// console.log(found);
+
+//  const arr=['2','3','4','5','6'];
+//  var b = arr.find(value=>value<5);
+//  console.log(b);
+
+//  const numbers=['1','2','3','4','5'];
+//  const result=numbers.find(value=>value>3);
+//  console.log(result);
+
+//=============================================================================================================FOREACH=========================
+// const arr=['1','2','3','4'];
+// arr.forEach(item=>{console.log(item)});
+
+// const array=['1','2','3','4','5','6','7','8','9'];
+// array.forEach(item=>{console.log(item)});
+
+// const alphabets=['a','b','c','d'];
+// alphabets.forEach(items=>{console.log(items)});
+
+// =============================================================================================================Not Run====REDUCE===============
+// const num=[1,2,3,4,5,6];
+// const sum=num.reduce((total,value)=>total+value);
+// console.log(sum);
+
+// const arr=[1,2,3,4];
+// const sum=arr.reduce((total,value)=> total + value,10);
+// console.log(sum);
+
+// const arr=[1,2,3,4,5];
+// const sum=arr.reduce((total,value)=>total+value,0);
+// console.log(sum);
+
+
+//=================================================================================================================SOME========================
+// const arrS=['1','2','3','4','5','6'];
+// const arrsome=arrS.some(num=>num>1);
+// console.log(arrsome);//==============================Agar koi ma thi bhi ek condn true rehse ne toh 'True' otherwise 'false'
+
+
+//=================================================================================================================EVERY========================
+const arrE=['7','2','43','41','5','6'];
+const arrevery=arrE.every(num=>num>4);
+console.log(arrevery);//=============================Agar badhi numbers condn na hisab thi 'True' rehse toh 'True' otherwise 'False'
+
+//====================================================================================================================INDEXOF======a menthod which is use to search an element from starting of array
+// const words = ['spray', 'limit', 'elite', 'elite','elite','exuberant', 'destruction', 'present'];
+// console.log(words.indexOf("elite"));
+// console.log(words.lastIndexOf("elite"));
+
+// let arr=["a","b","c","d","d","d","d","d"];
+// console.log(arr.indexOf("d"));
+// console.log(arr.lastIndexOf("d"));
+// console.log(arr);
+
+
+// const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
+// console.log(beasts.indexOf('bison'));
+// console.log(beasts.indexOf('bison', 3));
+// console.log(beasts.indexOf('giraffe'));//=================Agar ni rehse ta -1 batave
+
+//=================================================================================================================ENTRIES========================
+// const array1 = ['a', 'b', 'c'];
+// const iterator1 = array1.entries();
+// console.log(iterator1.next().value);
+// console.log(iterator1.next().value);
+// console.log(iterator1.next().value);
+
+
+//=================================================================================================================MAP========================
+// const array1 = [1, 4, 9, 16];
+// const map1 = array1.map(x => x * 2);
+// console.log(map1);
+
+
+//=================================================================================================================FLAT========================
+// const arr1 = [0, 1, 2, [3, 4]];
+// console.log(arr1.flat());
+// // expected output: [0, 1, 2, 3, 4]
+// const arr2 = [0, 1, 2, [[[3, 4]]]];
+// console.log(arr2.flat(2));
+// expected output: [0, 1, 2, [3, 4]]
+
+
+//=================================================================================================================SLICE========================
+// const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+// console.log(animals.slice(2));
+// // expected output: Array ["camel", "duck", "elephant"]
+
+// console.log(animals.slice(2, 4));
+// // expected output: Array ["camel", "duck"]
+// console.log(animals.slice(1, 5));
+// // expected output: Array ["bison", "camel", "duck", "elephant"]
+// console.log(animals.slice(-2));
+// // expected output: Array ["duck", "elephant"]
+// console.log(animals.slice(2, -1));
+// // expected output: Array ["camel", "duck"]
+// console.log(animals.slice());
+
+
+//=================================================================================================================SPLICE========================
+
+</script>
+</body>
+</html>

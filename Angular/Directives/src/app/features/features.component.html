@@ -1,0 +1,19 @@
+
+<!-- <button (click)="onadd()">Add</button>
+<br>
+<br>
+<button (click)="onedit()">Edit</button> -->
+
+<div class="container bg-primary">
+   <h1>{{title | titlecase}}</h1>
+   <h2>{{mname}}</h2>
+<ul>
+   <li *ngFor="let item of cname">{{item}}</li>
+</ul>
+<app-features-child [cname]="mname"(newname)="onadd($event)"></app-features-child>
+   
+<!-- Child to Parent -->
+<!-- <label>Add Names:</label><input type="text" name="" id="" placeholder="write your name">
+<button (click)="onaddname()">Add Name</button> -->
+</div>
+

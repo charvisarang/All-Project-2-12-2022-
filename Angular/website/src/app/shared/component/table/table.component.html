@@ -1,0 +1,17 @@
+<p>table works!</p>
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Class</th>
+        <th>Grade</th>
+        <th>Image</th>
+    </tr>
+    <tr *ngFor="let items of students">
+        <th>{{items.id}}</th>
+        <th>{{items.name}}</th>
+        <th>{{items.class}}</th>
+        <th>{{items.grade}}</th>
+        <!-- <th>{{items.image}}</th> -->
+    </tr>
+</table>

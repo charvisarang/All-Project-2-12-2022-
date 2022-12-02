@@ -1,0 +1,24 @@
+<p>about works!</p>
+<div class="container">
+    <form class="input d-flex mt-5 p-5 justify-content-center border-0 " role="search">
+        <input class="text w-25" type="search" placeholder="Search">
+        <button class="btn btn-outline-primary" type="submit">Search</button>
+      </form>
+      <!-- <table class="table">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Class</th>
+            <th>Grade</th>
+            <th>Image</th>
+        </tr>
+        <tr *ngFor="let items of students">
+            <th>{{items.id}}</th>
+            <th>{{items.name}}</th>
+            <th>{{items.class}}</th>
+            <th>{{items.grade}}</th>
+        
+        </tr>
+    </table> -->
+    <app-table [students]="students"></app-table>
+</div>

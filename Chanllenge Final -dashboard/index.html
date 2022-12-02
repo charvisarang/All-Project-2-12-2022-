@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/297e8e88b1.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One&family=Oleo+Script+Swash+Caps&family=Poppins:ital,wght@0,300;1,300&family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <!-- START HEADER -->
+    <div class="header">
+        <!-- LEFT-HEADER -->
+        <div class="header-left">
+            <label for="togglesidebar">
+                <i class="fa-solid fa-bars icon"></i></label>
+            <h2>Tally Scan</h2>
+            <h3>Dashboard</h3>
+        </div>
+        <!-- RIGHT-HEADER -->
+        <div class="header-right">
+            <div class="icon">
+                <i class="fa-solid fa-bell"></i>
+            </div>
+            <div class="image">
+                <img src="./assets/images/myimage.webp" alt="">
+            </div>
+            <h4>John Smith</h4>
+            <div class="icon">
+                <i class="fa-solid fa-caret-down"></i>
+            </div>
+        </div>
+    </div>
+    <!-- END HEADER -->
+
+    <!-- START SECTION -->
+    <section>
+        <input type="checkbox" name="" id="togglesidebar">
+        <!-- SECTION PART-1> START ASIDE -->
+        <aside class="aside">
+            <div class="list">
+                <p>GENERAL</p>
+                <ul>
+                    <li><i class="fa-solid fa-magnifying-glass"></i>&nbsp;<span class="text">search</span></li>
+                    <li><i class="fa-regular fa-bell"></i>&nbsp;<span class="text">alerts</span></li>
+                    <li><i class="fa-solid fa-tag"></i>&nbsp;<span class="text">tags</span></li>
+                    <br><br>
+                    <p>OTHERS</p>
+                    <li><i class="fa-solid fa-gear"></i>&nbsp;<span class="text">settings</span></li>
+                    <li><i class="fa-solid fa-sun"></i>&nbsp;<span class="text">tips</span></li>
+                    <li><i class="fa-solid fa-trash-can"></i>&nbsp;<span class="text">trash</span></li>
+                    <li><i class="fa-solid fa-arrow-right-to-bracket"></i>&nbsp;<span class="text">logout</span></li>
+                </ul>
+            </div>
+        </aside>
+        <!-- END ASIDE -->
+
+
+        <!-- SECTION PART-2> MAIN -->
+        <main>
+            <!-- START MAIN -->
+
+            <!-- MAIN PART-1> SERACHBAR -->
+            <div class="search">
+                <input type="text" name="" id="label" onkeyup="searchfun()">
+                <button class="btn">Filter</button>
+            </div>
+            <!-- END MAIN PART-1> SEARCHBAR -->
+
+            <!-- MAIN PART-2> ROW -->
+            <div class="row">
+                <div class="card-wrapper">
+                    <div class="card">
+                        <div class="content">
+                            <h4>Scans</h4>
+                            <p>350</p>
+                        </div>
+                        <div class="icon-wrapper">
+                            <i class="fa-solid fa-truck-droplet"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-wrapper">
+                    <div class="card">
+                        <div class="content">
+                            <h4>Scans</h4>
+                            <p>350</p>
+                        </div>
+                        <div class="icon-wrapper">
+                            <i class="fa-solid fa-truck-droplet"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-wrapper">
+                    <div class="card">
+                        <div class="content">
+                            <h4>Scans</h4>
+                            <p>350</p>
+                        </div>
+                        <div class="icon-wrapper">
+                            <i class="fa-solid fa-truck-droplet"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-wrapper">
+                    <div class="card">
+                        <div class="content">
+                            <h4>Scans</h4>
+                            <p>350</p>
+                        </div>
+                        <div class="icon-wrapper">
+                            <i class="fa-solid fa-truck-droplet"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-wrapper">
+                    <div class="card">
+                        <div class="content">
+                            <h4>Scans</h4>
+                            <p>350</p>
+                        </div>
+                        <div class="icon-wrapper">
+                            <i class="fa-solid fa-truck-droplet"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-wrapper">
+                    <div class="card">
+                        <div class="content">
+                            <h4>Scans</h4>
+                            <p>350</p>
+                        </div>
+                        <div class="icon-wrapper">
+                            <i class="fa-solid fa-truck-droplet"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- MAIN PART-2> END ROW -->
+            <!-- MAIN PART-3> START TABLE -->
+            <h2 class="recent">Recent Activity</h2>
+            <div class="table-format">
+                <table id="mytable">
+                    <tr>
+                        <th>Item</th>
+                        <th>Date</th>
+                        <th>Type</th>
+                        <th>Est.Cost</th>
+                        <th>Last</th>
+                        <th>List</th>
+                        <th>Auto</th>
+                        <th>Buy Now</th>
+                    </tr>
+                </table>
+            </div>
+            <!-- MAIN PART-3> END TABLE -->
+        </main>
+        <!-- END MAIN -->
+    </section>
+    <!-- END SECTION -->
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+
+
+
+
+<!-- Toolbar -->
+<h1 style="text-align:center;">Form AppComponent</h1>
+
+<!---------------------------------------------------------------------------------- Button Event -->
+<!-- <app-buttonevent></app-buttonevent> -->
+
+<!-- Communication(color) -->
+<!-- Child to Parent -->
+ <div class="parent">
+    <h2 style="color: red;">I am Parent</h2>
+    <div class="center">
+    <ol>
+        <li *ngFor="let item of cname">{{item}}</li> 
+    </ol>
+</div>
+<app-childown [cname]= 'mname'(newnames)='addNames($event)'></app-childown>
+</div>
+
+
+

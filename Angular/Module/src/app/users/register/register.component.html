@@ -1,0 +1,18 @@
+<p>Register Component From Module</p>
+<div class="container">
+<table class="table">
+    <tr>
+        <th>FirstName</th>
+        <th>Gender</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let items of studentsdata">
+        <td>{{items.firstname}}</td>
+        <td>{{items.gender}}</td>
+        <td>
+        <Button>Details</Button>
+        <button (click)="onEdit(items)">Edit</button>
+        <button (click)="onDelete(items)">Delete</button></td>
+    </tr>
+</table>
+</div>

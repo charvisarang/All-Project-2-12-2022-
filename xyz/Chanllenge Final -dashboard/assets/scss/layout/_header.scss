@@ -1,0 +1,54 @@
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid lightgrey;
+
+    &-left {
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+        padding: 15px;
+
+    }
+
+    &-right {
+        display: flex;
+        align-items: center;
+        justify-content: right;
+    }
+
+
+
+    .image {
+        width: 30px;
+        height: 30px;
+        border-radius: 50px;
+        overflow: hidden;
+        margin-right: 24px;
+
+        img {
+            height: auto;
+            max-width: 100%;
+        }
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    h3 {
+        font-size: 25px;
+        padding-left: 100px;
+    }
+
+    h4 {
+        margin-right: 20px;
+    }
+
+    .icon {
+        margin-right: 24px;
+    }
+
+}

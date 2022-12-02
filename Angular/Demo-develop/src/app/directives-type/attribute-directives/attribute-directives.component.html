@@ -1,0 +1,45 @@
+<p [class.paragraph]="flag">This is Paragraph.</p>
+
+<p [style.color]="'red'">This is Paragraph.</p>
+<p [style.background-color]="'orange'">My Para</p>
+
+<p [class.paragraph]="para">Your Para</p>
+<p [style.border]="'6px solid red'">This is inline style .</p>
+
+<!-- FIRST -->
+<p [ngStyle]="{ 'font-weight': applyStyle ? 'bold' : 'normal' }">
+  This is inline style condition bas.</p>
+<button (click)="applyStyle = !applyStyle">Click Me 1</button>
+
+<!-- SECOND  STYLE-->
+<h1 [ngStyle]="{'color':applyMe?'red':'blue'}">This is me</h1>
+<button (click)="applyMe = !applyMe">Click Me</button>
+
+<!-- THIRD FUNCTION -->
+<p [ngClass]="getClass()">This is function use class biding.</p>
+<button (click)="setClassFlag = !setClassFlag">Click Me 2</button>
+
+
+<!-- FOURTH FUNCTION-->
+<p [ngStyle]="getStyle()">This is using function bash style collection.</p>
+<button (click)="setStyleFlag = !setStyleFlag">Click Me 3</button>
+
+<!-- FIFTH STYLE-->
+<p [ngClass]="setTextClass ? 'text-primary ' : 'text-danger paragraph'">
+  This is conditions bas class biding.</p>
+<button (click)="setTextClass = !setTextClass">Click Me 5</button>
+
+<hr />
+
+<h4>NgClass with multiple conditions</h4>
+<ul *ngFor="let person of people">
+  <li
+    [ngClass]="{
+      'text-success': person.country === 'UK',
+      'text-primary': person.country === 'USA',
+      'text-danger': person.country === 'HK' || person.country === 'UAE'
+    }">
+    {{ person.name }} ({{ person.country }})
+  </li>
+</ul>
+<hr />

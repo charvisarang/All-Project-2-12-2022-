@@ -1,0 +1,24 @@
+
+
+
+
+
+<div class="container ">
+    <a routerLink="../customer-form"><button type="button" class="btn btn-primary ">Add Customer</button></a>
+    <h3>Customer List</h3>
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Password</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let items of customers">
+            <td>{{items.id}}</td>
+            <td>{{items.email}}</td>
+            <td>{{items.password}}</td>
+            <td><button type="button" class="btn btn-primary">Edit</button></td>
+        </tr>
+    </table>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,41 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width:900px;
+    margin: 0 auto;
+    border-left: 10px solid rgb(238, 62, 62) ;
+    padding-bottom: 90px;
+    font-family: 'Poppins', sans-serif;
+}
+.c1{
+    width: 40%;
+    text-align: right;
+    vertical-align: top;
+}
+.c2{
+    text-align: left;
+    vertical-align: top;
+    padding-left: 40px;
+}
+h4{
+    color:red;
+    text-align: right;
+    text-transform:uppercase;
+}
+a{
+    text-decoration: none;
+    color: red;
+}
+.skills td{
+    padding: 0 90px 0 0px;
+}
+.r{
+    color:red;
+}
+b{
+    text-transform: capitalize;
+}
+

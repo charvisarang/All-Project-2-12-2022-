@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="head">
+        <h1>Friends Data Table</h1>
+        <input type="text" name="n1" id="label" placeholder="write here" onkeyup="searchfun()">
+        <button class="btn1" onclick="togglePopup()">Add User</button>
+    </div>
+
+    <table id="table">
+        <tr id="tr">
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+        </tr>
+    </table>
+
+
+
+    <div class="model-wrapper" id="model">
+        <div class="model">
+
+            <button class="btn1" onclick="togglePopup()">X</button>
+            <div class="text">
+                <span>Name</span><input type="text" name="n1" id="name"><br><br>
+                <span>Email</span><input type="text" name="n2" id="email"><br><br>
+                <span>Age</span><input type="text" name="n3" id="age"><br><br>
+                <button id="button">Entry</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js">
+
+
+
+    </script>
+</body>
+
+</html>

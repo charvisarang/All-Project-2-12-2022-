@@ -1,0 +1,14 @@
+{
+  "name": "binal_dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "sass": "^1.54.5"
+  },
+  "scripts": {
+    "build": "sass assets/scss/styles.scss assets/css/styles.css --watch"
+  },
+  "author": "",
+  "license": "ISC"
+}

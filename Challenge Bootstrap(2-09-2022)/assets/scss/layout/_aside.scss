@@ -1,0 +1,96 @@
+.sidebar {
+    max-width: 180px;
+    flex: 0 0 180px;
+    background-color: #ffffff;
+
+
+    .logo {
+        height: 80px;
+        cursor: pointer;
+        font-size: 30px;
+
+        .logo:hover {
+            color: rgb(100, 228, 174);
+        }
+
+        &-text {
+            color: #bec6d0;
+            font-weight: bold;
+            font-size: 25px;
+            letter-spacing: 2px;
+        }
+
+    }
+}
+
+.nav {
+    .nav-item {
+        position: relative;
+
+        // .triangle {
+        // }
+
+
+        .nav-link {
+            color: #99acb3;
+            cursor: pointer;
+
+            &.active,
+            &:hover {
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    bottom: 0;
+                    right: 0;
+                    border-bottom: 20px solid $success;
+                    border-left: 20px solid transparent;
+                }
+
+                color: #75beb8;
+                background-color: #f6fafd;
+                font-weight: bold;
+
+                .aside-icon {
+                    font-size: 20px;
+                }
+
+            }
+        }
+    }
+}
+
+
+
+
+
+
+// .nav {
+//     .nav-item {
+
+
+
+//         .nav-link {
+//             color: #99acb3;
+//             font-size: 15px;
+//             cursor: pointer;
+
+
+//         }
+
+//         &:hover {
+//             background-color: #f6fafc;
+//            // color: #6dc2b9;
+//            color: red;
+
+//         }
+//     }
+// }
+
+// &.active {
+//     background-color: #f6fafc;
+//     color: #6dc2b9;
+//     font-weight: bold;
+
+//    }

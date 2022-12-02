@@ -1,0 +1,61 @@
+<p>modern works!</p>
+<!-- <div *ngIf="msg">Showing Messages</div> -->
+<!----------------------------------------------------------------------------------NGIF -->
+<div *ngIf="msg; else elsemsg">Showing Messages</div>
+<ng-template #elsemsg></ng-template>
+
+<div *ngIf="show;else noshow">Display Messages</div>
+    <ng-template #noshow></ng-template>
+
+
+
+<!----------------------------------------------------------------------------------NGFOR -->
+<div class="modern">
+    <button type="button" class="btn btn-outline-primary" routerLink="../modern1"> go to Modern1</button>
+<table class="table"> 
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>City</th>
+        <th>Class</th>
+        <th>Action</th>
+      
+    </tr>
+    <tr *ngFor="let item of students">
+        
+        <th>{{ item.id}}</th>
+        <th>{{ item.name}}</th> 
+        <th>{{item.city}}</th>
+        <th>{{item.class}}</th>
+        <th><button>Add</button></th>
+        <!-- <th><Button (click)="">Add</Button></th> -->
+    </tr>
+</table>
+</div>
+
+<!----------------------------------------------------------------------------------NGSWITCH -->
+<!-- Select Country:
+<select (change)="choice()">
+    <option *ngFor ="let c of countries"[value]="c.code">{{c.country}}</option>
+</select>
+{{selectedcountry}} -->
+
+
+
+<!----------------------------------------------------------------------------------RadioButton -->
+
+
+<div class="form-check">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" [(ngModel)]="radio" id="flexRadioDefault1" value="1">
+    <label>
+       radio1
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="flexRadioDefault"[(ngModel)]="radio" id="flexRadioDefault2" value="2">
+    <label>
+       radio2
+    </label>
+  </div>
+ <p>{{radio}}</p>
+

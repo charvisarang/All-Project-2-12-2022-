@@ -1,0 +1,12 @@
+<!-- <app-buttons></app-buttons> -->
+<div class="container">
+<input type="text" name="" #input>
+<button (click)="onSubmit(input)">Submit</button>
+<div class="class">
+<app-lifecyclehook [value]="inputText" *ngIf="destroy">
+    <h3>Again Enter Plzz:{{inputText}}</h3>
+</app-lifecyclehook>
+</div>
+<button (click)="destroyfunction()">Destroy</button>
+</div>
+

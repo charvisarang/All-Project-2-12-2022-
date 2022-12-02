@@ -1,0 +1,15 @@
+<p>list works!</p>
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let items of customers">
+        <td>{{items.id}}</td>
+        <td>{{items.email}}</td>
+        <td>{{items.password}}</td>
+        <td><button type="button" class="btn  bg-primary text-white" routerLink="edit">Edit</button></td>
+    </tr>
+</table>

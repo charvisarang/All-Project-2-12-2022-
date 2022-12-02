@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ===============================================================HEADER======================================== */
+/* ===============================================================HEADER======================================== */
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid lightgrey;
+}
+
+.header .left-header {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    padding: 15px;
+
+}
+
+.header .right-header {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.image {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    overflow: hidden;
+    margin-right: 24px;
+}
+
+.image img {
+    height: auto;
+    max-width: 100%;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+h3 {
+    font-size: 25px;
+    padding-left: 100px;
+}
+
+h4 {
+    margin-right: 20px;
+}
+
+.icon {
+    margin-right: 24px;
+}
+
+/* ===============================================================ASIDE======================================== */
+/* ===============================================================ASIDE======================================== */
+section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.aside {
+    width: 15%;
+    height: 100%;
+    background-color: ghostwhite;
+   
+}
+
+#togglesidebar {
+    display: none;
+}
+
+#togglesidebar:checked+.aside {
+    width: 0;
+    transform: translateX(-200px);
+    transition: 2s;
+}
+
+li {
+    list-style: none;
+    padding: 20px 20px;
+}
+
+li:hover {
+    cursor: pointer;
+    background-color: rgb(173, 231, 173);
+    color: green;
+    border-left: 2px solid rgb(5, 226, 24);
+}
+
+p {
+    padding: 15px;
+}
+
+.text {
+    text-transform: capitalize;
+}
+
+/* ===============================================================MAIN======================================== */
+/* ===============================================================MAIN======================================== */
+main {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: lightgray;
+}
+
+.search {
+    display: flex;
+    justify-content: end;
+    margin: 20px;
+}
+
+.btn {
+    background-color: green;
+    color: white;
+    font-size: 25px;
+    border: none;
+    padding: 5px;
+    border-radius: 2px;
+}
+.btn:hover{
+    background-color: white;
+    color: green;
+}
+/* .row {
+    flex-wrap: wrap;
+    display: flex;
+  
+}
+
+.card-wrapper {
+    width: 15%;
+    margin: 10px;
+} */
+
+.card-wrapper .card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 15px;
+    border-radius: 3px;
+}
+.card-wrapper .card:hover{
+    background-color: aquamarine;
+    transition: 2s;
+    transform: scale(1.2);
+}
+.card-wrapper .card .content {
+    font-size: 20px;
+}
+
+.card-wrapper .card .icon-wrapper {
+    padding-right: 20px;
+}
+
+/* ==========================================================TABLE==================================================== */
+/* ==========================================================TABLE==================================================== */
+
+.recent{
+  padding: 10px;
+}
+.table-format{
+    width: 100%;
+    
+}
+#mytable {
+    border-collapse: collapse;
+    /* width: 100%; */
+    background-color: white;
+    margin-top: 30px;
+    text-align: left;
+    padding: 0 10px;
+   
+}
+
+#mytable th,
+td {
+    border-bottom: 1px solid grey;
+    padding: 10px;
+}
+
+th {
+    color: rgb(167, 166, 166);
+    font-size: 20px;
+}
+
+/* ==========================================================TABLE Badge==================================================== */
+/* ==========================================================TABLE Badge==================================================== */
+.badge{
+    border-radius: 20px;
+    padding: 5px;
+}
+.badge-discarded{
+    color:#df9090;
+    background-color: #ffeeed;
+}
+.badge-want{
+color: #64b975;
+background-color: #f1fef4;
+}
+.badge-waiting{
+color: #ea9946;
+background-color: #fff7e4;
+}
