@@ -1,0 +1,18 @@
+
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Action</th>
+    </tr>
+  
+    <tr *ngFor="let items of custlist">
+        <td>{{items.name}}</td>
+        <td>{{items.gender}}</td>
+        <td>
+            <button (click)="onDelete(items.id)">Delete</button>
+            <button (click)="onEdit(items)">Edit</button>
+        </td>
+    </tr>
+    
+</table>

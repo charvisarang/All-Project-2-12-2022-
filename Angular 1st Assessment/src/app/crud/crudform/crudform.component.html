@@ -1,0 +1,35 @@
+<div class="container">
+<form [formGroup]="mainform" >
+    
+    <label for="">First Name</label>
+    <input type="text"  placeholder="enter here" name="name" formControlName="name">
+    <label for="">Gender</label>
+    <input type="text"  placeholder="enter here" name="gender" formControlName="gender">
+    <label for="">Salary</label>
+    <input type="text"  placeholder="enter here" name="salary" formControlName="salary">
+    <label for="">DOB</label>
+    <input type="text" placeholder="enter here" name="dob" formControlName="dob">
+<button (click)="onSubmit()">Submit</button>
+
+</form>
+
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Salary</th>
+        <th>DOB</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let items of table">
+        <th>{{items.id}}</th>
+        <th>{{items.name}}</th>
+        <th>{{items.gender}}</th>
+        <th>{{items.salary}}</th>
+        <th>{{items.dob}}</th>
+        <th><button (click)="onDelete(items.id)">Delete</button>
+            <button (click)="onEdit(items)">Edit</button></th>
+    </tr>
+</table>
+</div>

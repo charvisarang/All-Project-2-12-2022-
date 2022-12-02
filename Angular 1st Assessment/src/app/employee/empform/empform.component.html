@@ -1,0 +1,59 @@
+<h4 style="text-align: center;">Login Form</h4>
+<div class="container">
+    <form [formGroup]="loginform" class="form py-2">
+
+        <div class="mb-3">
+            <label class="form-label">First Name</label>
+            <input type="text" class="form-control" name="firstname" placeholder="enter name"
+                formControlName="firstname">
+            <span
+                *ngIf="loginform.controls['firstname'].invalid && (isSubmitted || loginform.controls['firstname'].touched || loginform.controls['firstname'].dirty)">
+                <p style="color: red;" *ngIf="loginform.controls['firstname'].errors?.['required']">Please Fill Valid
+                    Input
+                </p>
+                <p style="color: red;" *ngIf="loginform.controls['firstname'].errors?.['minlength']">Maximum atleast 3
+                    characters</p>
+            </span>
+        </div>
+      
+
+        <div class="mb-3">
+            <label class="form-label">Gender</label>
+            <input type="text" class="form-control" name="gender" placeholder="enter gender" formControlName="gender">
+            <span
+                *ngIf="loginform.controls['gender'].invalid && (isSubmitted || loginform.controls['gender'].touched || loginform.controls['gender'].dirty)">
+                <p style="color: red;" *ngIf="loginform.controls['gender'].errors?.['required']">Please Fill Valid Input
+                </p>
+            </span>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Date Of Birth</label>
+            <input type="date" class="form-control" name="date" placeholder="enter date of birth"
+                formControlName="dob">
+            <span
+                *ngIf="loginform.controls['dob'].invalid && (isSubmitted || loginform.controls['dob'].touched || loginform.controls['dob'].dirty)">
+                <p style="color: red;" *ngIf="loginform.controls['dob'].errors?.['required']">Please Fill Valid Input
+                </p>
+
+            </span>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Salary</label>
+            <input type="number" class="form-control" name="number" placeholder="enter salary" formControlName="salary">
+            <span
+                *ngIf="loginform.controls['salary'].invalid && (isSubmitted || loginform.controls['salary'].touched || loginform.controls['salary'].dirty)">
+                <p style="color: red;" *ngIf="loginform.controls['salary'].errors?.['required']">Please Fill Valid Input
+                </p>
+
+            </span>
+        </div>
+<div class="d-flex justify-content-around py-2">
+        <button type="button" class="btn btn-primary" (click)="onSave()">Save</button>
+        <button type="button" class="btn btn-primary" (click)="onReset()">Reset</button>
+    </div>   
+    </form>
+</div>
+
+<app-emplist [employeelist]="employeeformdata" (newchanges)="onEdit($event)"></app-emplist>

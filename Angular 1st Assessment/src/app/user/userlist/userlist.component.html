@@ -1,0 +1,23 @@
+
+<div class="container">
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+  
+        <tr *ngFor="let items of userlist">
+            <td>{{items.firstname}}</td>
+            <td>{{items.gender}}</td>
+            <td>
+                <button>Details</button>
+                <button >Edit</button>
+                <button (click)="onDelete(items.id)">Delete</button>
+            </td>
+        </tr>
+  
+    </table>
+</div>

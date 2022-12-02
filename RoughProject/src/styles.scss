@@ -1,0 +1,10 @@
+@import 'assets/base/index';
+@import 'assets/vendor/bootstrap_base';
+@import 'assets/vendor/bootstrap_component';
+@import 'assets/components/index';
+@import 'assets/layout/index';
+@import 'assets/utilities/index';
+
+@import '@angular/cdk/overlay-prebuilt.css';
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';

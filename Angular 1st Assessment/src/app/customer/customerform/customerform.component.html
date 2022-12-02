@@ -1,0 +1,22 @@
+
+<form [formGroup]="mainform"> 
+    <label>Name</label>
+    <input type="text" placeholder="enter here" formControlName="name">
+    <div *ngIf="mainform.controls['name'].invalid && (isSubmitted || mainform.controls['name'].touched || mainform.controls['name'].dirty)">
+        <p *ngIf="mainform.controls['name'].errors?.['required']">Name is required</p>
+        <p *ngIf="mainform.controls['name'].errors?.['minlength']">Maximum need 3 Characters</p>
+        <p *ngIf="mainform.controls['name'].errors?.['pattern']">Only fill Characters</p>
+    </div>
+    <label>Gender</label>
+    <input type="text" placeholder="enter here" formControlName="gender">
+    <div *ngIf="mainform.controls['gender'].invalid && (isSubmitted || mainform.controls['gender'].touched || mainform.controls['gender'].dirty)">
+        <p *ngIf="mainform.controls['gender'].errors?.['required']">Gender is required</p>
+        <p *ngIf="mainform.controls['gender'].errors?.['minlength']">Maximum need 3 Characters</p>
+        <p *ngIf="mainform.controls['gender'].errors?.['pattern']">Only fill Characters</p>
+    </div>
+
+
+
+    <button (click)="onSubmit()">Submit</button>
+</form>
+<app-customerlist [custlist]="user"></app-customerlist>

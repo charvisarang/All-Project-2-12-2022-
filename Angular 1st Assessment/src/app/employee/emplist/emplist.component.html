@@ -1,0 +1,26 @@
+<div class="container ">
+
+<h3 style="text-align: center;">Employee List</h3>
+<table class="table">
+    <tr>
+        <th>Sr.No</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>D.O.B</th>
+        <th>Salary</th>
+        <th>Actions</th>
+    </tr>
+    <tr *ngFor="let items of employeelist index as i">
+        <td>{{i+1}}</td>
+        <td>{{items.firstname | titlecase}}</td>
+        <td>{{items.gender | uppercase}}</td>
+        <td>{{items.dob}}</td>
+        <td>{{items.salary | currency:'INR'}}</td>
+        <td>
+            <button type="button" class="btn bg-success text-white mx-2"(click)="onShowDetails(items)"><Details></Details></button>
+            <button class="btn bg-info text-white mx-2 " (click)="onEdit(items)">Edit</button>
+            <button class="btn bg-danger text-white mx-2"(click)="onDelete(items.id)">Delete</button>
+        </td>
+    </tr>
+</table>
+</div>

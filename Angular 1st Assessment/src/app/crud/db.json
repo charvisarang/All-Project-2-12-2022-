@@ -1,0 +1,18 @@
+{
+  "crudlist": [
+    {
+      "id": 10,
+      "name": "charvi",
+      "gender": "female",
+      "salary": "123",
+      "dob": "djg"
+    },
+    {
+      "id": 12,
+      "name": "charvi",
+      "gender": "female",
+      "salary": "1143",
+      "dob": "14-05-1996"
+    }
+  ]
+}

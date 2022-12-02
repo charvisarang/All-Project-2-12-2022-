@@ -1,0 +1,17 @@
+@import '../src/assets/scss/base/index';
+@import '../src/assets/scss/Component/index';
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+// CDk
+@import '@angular/cdk/overlay-prebuilt.css';
+
+// html,
+// body {
+//     height: 100%;
+// }
+
+// body {
+//     margin: 0;
+//     font-family: Roboto, "Helvetica Neue", sans-serif;
+// }

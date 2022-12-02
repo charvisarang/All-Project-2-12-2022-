@@ -1,0 +1,165 @@
+<section>
+    <div class="box p-4 rounded bg-primary " style="width: 500px;">
+        <!-- <h1 class="text-center text-white text-decoration-underline">Employee Form</h1> -->
+        <!-- <h1 *ngIf="changing">Add Company</h1>
+        <h1 *ngIf="!changing">Edit Company</h1> -->
+
+        <div class="row text-white">
+            <div class="col">
+                <form [formGroup]="employeeform" (ngSubmit)="onSave()">
+                    <!-- FIRST NAME -->
+                    <div class="mb-4">
+                        <input type="text" class="form-control" id="firstname" formControlName="firstname"
+                            placeholder="Enter First Name">
+                        <div
+                            *ngIf="employeeform.controls['firstname'].invalid && (isSubmitted || employeeform.controls['firstname'].touched || employeeform.controls['firstname'].dirty)">
+                            <p class="text-danger" *ngIf="employeeform.controls['firstname'].errors?.['required']">First
+                                Name is required
+                            </p>
+                            <p class="text-danger" *ngIf="employeeform.controls['firstname'].errors?.['pattern']">
+                                Fill Only alphabets
+                            </p>
+                        </div>
+                    </div>
+                    <!-- LAST NAME -->
+                    <div class="mb-4">
+                        <input type="text" class="form-control" id="lastname" formControlName="lastname"
+                            placeholder="Enter Last Name">
+                        <div
+                            *ngIf="employeeform.controls['lastname'].invalid && (isSubmitted || employeeform.controls['lastname'].touched || employeeform.controls['lastname'].dirty)">
+                            <p class="text-danger" *ngIf="employeeform.controls['lastname'].errors?.['required']">Last
+                                Name is required
+                            </p>
+                            <p class="text-danger" *ngIf="employeeform.controls['lastname'].errors?.['pattern']">
+                                Fill Only alphabets
+                            </p>
+                        </div>
+                    </div>
+                    <!-- EMAIL -->
+                    <div class="mb-4">
+                        <input type="email" class="form-control" id="email" formControlName="email"
+                            placeholder="Enter Email">
+                        <div
+                            *ngIf="employeeform.controls['email'].invalid && (isSubmitted || employeeform.controls['email'].touched || employeeform.controls['email'].dirty)">
+                            <p class="text-danger" *ngIf="employeeform.controls['email'].errors?.['required']">Email
+                                is required
+                            </p>
+                            <p class="text-danger" *ngIf="employeeform.controls['email'].errors?.['pattern']">Fill Valid
+                                Email
+
+                            </p>
+
+                        </div>
+                    </div>
+                    <!-- PHONE NUMBER -->
+                    <div class="mb-4">
+                        <input class="form-control" type="text" appPhone formControlName="mobileno" id="phone-number"
+                            placeholder="(XX)-(XXX)-(XXX)">
+                        <div
+                            *ngIf="employeeform.controls['mobileno'].invalid && (isSubmitted || employeeform.controls['mobileno'].touched || employeeform.controls['mobileno'].dirty)">
+                            <p class="text-danger" *ngIf="employeeform.controls['mobileno'].errors?.['required']">
+                                Phone Number
+                                is required
+                            </p>
+                            <p class="text-danger" *ngIf="employeeform.controls['mobileno'].errors?.['minlength']">
+                                Required 10 digits
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <!-- SALARY $ -->
+                    <div>
+                        <div class="input-group mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">$</span>
+                            </div>
+                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)"
+                                formControlName="salary" placeholder="Enter Your Salary" />
+                            <div class="input-group-append">
+                                <span class="input-group-text">.00</span>
+                            </div>
+                        </div>
+                        <div
+                            *ngIf="employeeform.controls['salary'].invalid && (isSubmitted || employeeform.controls['salary'].touched || employeeform.controls['salary'].dirty)">
+                            <p class="text-danger" *ngIf="employeeform.controls['salary'].errors?.['required']">
+                                Salary
+                                is required
+                            </p>
+                            <p class="text-danger" *ngIf="employeeform.controls['salary'].errors?.['pattern']">
+                                Only enters digit
+                            </p>
+                        </div>
+                    </div>
+                    <!-- COUNTRY -->
+                    <div class="mb-4">
+                        <select class="form-control" formControlName="selectcountry" (change)="onSelectCountry($event)">
+                            <option value="">Select Country</option>
+                            <option *ngFor="let countries of country">{{countries.name}}
+                            </option>
+                        </select>
+                        <div
+                            *ngIf="employeeform.controls['selectcountry'].invalid && (isSubmitted || employeeform.controls['selectcountry'].touched || employeeform.controls['selectcountry'].dirty)">
+                            <p class="text-danger" *ngIf="employeeform.controls['selectcountry'].errors?.['required']">
+                                Select State
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+                    <!-- STATE -->
+                    <div class="mb-4">
+                        <select class="form-control" formControlName="selectstate"
+                            (change)="onSelectState($event)">Select State
+                            <option value="">Select State</option>
+                            <option *ngFor="let states of state">{{states.name}}</option>
+                        </select>
+                        <div
+                            *ngIf="employeeform.controls['selectstate'].invalid && (isSubmitted || employeeform.controls['selectstate'].touched || employeeform.controls['selectstate'].dirty)">
+                            <p class="text-danger" *ngIf="employeeform.controls['selectstate'].errors?.['required']">
+                                Select State
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="mb-3">
+                        <select name="" id="" class="form-control" formControlName="selectcity">Select City
+                            <option value="">Select City</option>
+                            <option *ngFor="let cities of city">{{cities.name}}</option>
+                        </select>
+                        <div
+                            *ngIf="employeeform.controls['selectcity'].invalid && (isSubmitted || employeeform.controls['selectcity'].touched || employeeform.controls['selectcity'].dirty)">
+                            <p class="text-danger" *ngIf="employeeform.controls['selectcity'].errors?.['required']">
+                                Select City
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="d-flex justify-content-around">
+                        <button type="button" class="btn btn-danger" (click)="onCancel()">Cancel</button>
+                        <button type="submit" class="btn btn-success">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal" [ngStyle]="{display:displaystyle}" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                    (click)="onYes()"></button>
+            </div>
+            <h3 class="fs-5 ms-3">Are you want the close the form?</h3>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="onYes()">Yes</button>
+                <button type="button" class="btn btn-primary" (click)="onNo()">No</button>
+            </div>
+        </div>
+    </div>
+</div>

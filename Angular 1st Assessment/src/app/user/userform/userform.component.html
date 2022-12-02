@@ -1,0 +1,22 @@
+
+<div class="container">
+<form [formGroup]="mainform">
+    <label for="">Enter First Name</label>
+    <input type="text" name="firstname" placeholder="enter here" formControlName="firstname">
+    <span
+    *ngIf="mainform.controls['firstname'].invalid && (isSubmitted || mainform.controls['firstname'].touched || mainform.controls['firstname'].dirty)">
+    <p style="color: red;" *ngIf="mainform.controls['firstname'].errors?.['required']">Please Fill Valid Input
+    </p>
+</span>
+    <label for="">Enter Gender</label>
+    <input type="text" name="gender" placeholder="enter here" formControlName="gender">
+    <span
+    *ngIf="mainform.controls['gender'].invalid && (isSubmitted || mainform.controls['gender'].touched || mainform.controls['gender'].dirty)">
+    <p style="color: red;" *ngIf="mainform.controls['gender'].errors?.['required']">Please Fill Valid Input
+    </p>
+</span>
+    <button (click)="onSubmit()">Submit</button>
+</form>
+
+<app-userlist [userlist]="data" ></app-userlist>
+</div>
