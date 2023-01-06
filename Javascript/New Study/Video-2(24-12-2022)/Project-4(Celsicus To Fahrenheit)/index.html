@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            background-color: aqua;
+            text-align: center;
+            padding: 50px;
+            margin: 50px;
+        }
+
+        .box1 {
+            display: inline-block;
+        }
+
+        input[type=number] {
+            padding: 10px;
+            margin: 10px;
+        }
+
+        label {
+            font-size: 25px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Temperature Convertor</h1>
+    <div class="container">
+
+        <div class="box1">
+            <label for="celsius">Celsius</label><br>
+            <input type="number" id="cel">
+        </div>
+
+        <div class="box1">
+            <label for="fahrenheit">Fahrenheit</label><br>
+            <input type="number" id="fah">
+        </div>
+    </div>
+</body>
+<script>
+    let cel = document.getElementById("cel");
+    console.log(cel);
+    let fah = document.getElementById("fah");
+
+    cel.addEventListener("input", function () {
+        let c = this.value;
+        console.log(c);
+        let formula = c * (9 / 5) + 32;
+        console.log(formula);
+        fah.value = formula;
+    });
+    fah.addEventListener("input", function () {
+        let f = this.value;
+        console.log(f);
+        let formula = (f - 32) * 5 / 9;
+        console.log(formula);
+        cel.value = formula;
+    });
+</script>
+
+</html>

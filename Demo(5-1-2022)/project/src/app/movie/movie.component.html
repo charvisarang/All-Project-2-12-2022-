@@ -1,0 +1,135 @@
+<div class=" w-100 m-0 p-0 overflow-hidden">
+    <div class="p-4 ms-4 mb-0 align-items-center">
+
+        <!-- Avengers -->
+        <div class="d-flex justify-content-between align-items-center mb-0">
+            <h5 class="fw-bold">Avengers Black Widow</h5>
+            <div class="me-5 border p-1 rounded"><img src="assets/images/cloud.png" alt=""> Export</div>
+        </div>
+
+        <!-- Image & Graph -->
+        <div class="d-flex justify-content-between align-items-center my-4 flex-md-wrap flex-sm-wrap">
+            <img class="image1 rounded-4 me-4" src="assets/images/myimage.webp" alt="">
+            <div class=" border rounded-4 flex-grow-1 p-3 me-5 fw-semibold">
+                <h6 class="fw-semibold">Average watch time</h6>
+                <p>This track the average watch by users every month</p>
+                <img class=" image2 flex-grow-1 me-5" src="assets/images/graph.jfif" alt="image">
+            </div>
+        </div>
+
+        <!-- Movie Properties -->
+        <div class="d-flex justify-content-between align-items-center mb-0 me-5 ">
+            <div>
+                <h6 class="fw-semibold">Movie Properties</h6>
+                <p>A list of details for this movie</p>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mb-0">
+                <img class="me-1 mb-3" src="assets/images/line.png" alt="image">
+                <p class="text-primary">Trending</p>
+            </div>
+        </div>
+
+
+        <!-- Table -->
+        <div class="me-5 border rounded-3 overflow-hidden mb-3">
+            <table class="table ">
+                <tr>
+                    <th>Category</th>
+                    <th>Streams</th>
+                    <th>Watchlists</th>
+                    <th>Owner</th>
+                    <th>Release Date</th>
+                </tr>
+                <tr>
+                    <td><span class="badge rounded-5 me-2">Action</span><span class="badge rounded-5">Thriller</span>
+                    </td>
+                    <td>24,512,343</td>
+                    <td>389,754</td>
+                    <td>Sony,Entertainment</td>
+                    <td>21st May,2022</td>
+                </tr>
+            </table>
+        </div>
+
+
+        <!-- Interest Tracking Insights -->
+        <div class="row">
+            <h6 class="fw-semibold">Interest Tracking Insights</h6>
+            <p>Keep track of the insights on this movie</p>
+        </div>
+
+
+        <div class="me-5 border rounded-3 overflow-hidden mb-3">
+            <table class="table ">
+                <tr>
+                    <th>People Reached</th>
+                    <th>Content Interaction</th>
+                    <th>Impressions</th>
+                    <th>Shares</th>
+                    <th>Likes</th>
+                </tr>
+                <tr>
+                    <td>39,823,154</td>
+                    <td>76,923,304</td>
+                    <td>101,783,945</td>
+                    <td>14,895</td>
+                    <td>34,056,147</td>
+                </tr>
+            </table>
+        </div>
+
+
+
+        <!-- All Movies -->
+        <div class="row me-5 mb-3">
+            <ul class=" d-flex  align-items-center  ">
+                <li class="active">All Movies</li>
+                <li>Trending</li>
+                <li>Upcoming Premier</li>
+            </ul>
+        </div>
+
+        <!-- Collection -->
+        <div class="d-flex justify-content-between align-items-center mb-0 me-5 mb-3">
+            <div>
+                <h6 class="fw-semibold">Collection of all movies</h6>
+                <p>Keep track of all the movies on moviebox</p>
+            </div>
+            <div class="d-inline-block align-text-top">
+                <input class="form-control me-2 px-3" type="search" placeholder="Search" aria-label="Search">
+                <img class="search-icon" src="assets/images/Vector.png" alt="">
+            </div>
+        </div>
+
+        <div class="me-5 border rounded-3 overflow-hidden mb-3">
+            <table class="table ">
+                <tr>
+                    <th>Name<img src="assets/images/arrow.png" alt="image"></th>
+                    <th>Category</th>
+                    <th>Popularity/Interest</th>
+                    <th>Watchlists</th>
+                    <th>Streams</th>
+                    <th>Release Date</th>
+                    <th></th>
+                </tr>
+                <tr *ngFor="let items of moviedata">
+                    <td>
+                        <img src="{{items.img}}" alt="image"
+                            style="width: 50px; height: 50px; border-radius: 50%;">{{items.name}}
+                    </td>
+                    <td class="badgetext rounded-circle">{{items.category}}</td>
+                    <td>
+                        <img src="{{items.img1}}" alt="" style="width: 50px; height: 50px; border-radius: 50%;">
+                        {{items.popularity}}
+                    </td>
+                    <td>{{items.watchlists}}</td>
+                    <td>{{items.streams}}</td>
+                    <td>{{items.releasedate}}</td>
+                    <td>
+                        <button type="button" class="btn px-3">View</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

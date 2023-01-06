@@ -1,0 +1,37 @@
+<div class="d-flex flex-column">
+    <header class="w-100 p-3 d-flex align-items-center justify-content-between shadow-sm">
+        <!-- HEADER-LEFT -->
+        <div class="header-left cursor-pointer">
+            <a class="d-flex text-decoration-none">
+                <img src="../../assets/images/1rhythmlogo.png" alt="" class="me-2">
+                <h1 class="text-info rhythm">1Rhythm</h1>
+            </a>
+        </div>
+        <!-- HEADER-CENTER -->
+        <div class="header-center d-flex justify-content-between align-items-center" id="toggleHeader">
+            <a href="" class="me-3 active"><i class="fa-solid fa-house me-1"></i>Home</a>
+            <a href="" class="me-3"><i class="fa-solid fa-microphone-lines me-1"></i>Studio</a>
+            <a href="" class="me-3"><i class="fa-solid fa-palette me-1"></i>Artist</a>
+            <a href="" class="me-3"><i class="fa-solid fa-book me-1"></i>Booking History</a>
+        </div>
+        <!-- HEADER-RIGHT -->
+        <div class="header-right d-flex justify-content-between align-items-center">
+            <!-- DROPDOWN -->
+            <div class="nav-item" ngbDropdown>
+                <a class="nav-link" ngbDropdownToggle>
+                    <i class="fa-solid fa-user me-3 fs-5 text-dark cursor-pointer"></i> </a>
+                <div ngbDropdownMenu>
+                    <a ngbDropdownItem>Action</a>
+                    <a ngbDropdownItem>Another action</a>
+                    <a ngbDropdownItem>Something else here</a>
+                </div>
+            </div>
+            <!-- <button class="icon-button"> -->
+            <i class="icon-bell fa-solid fa-bell me-3 fs-5 text-primary cursor-pointer"></i>
+            <span class="icon-badge"></span>
+            <!-- </button> -->
+
+            <button type="button" class="btn btn-danger">Logout</button>
+        </div>
+    </header>
+</div>

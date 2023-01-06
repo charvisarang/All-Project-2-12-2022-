@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--============================================================================================= Amresh Valu -->
+    <!-- <script>
+        function innertext() {
+            document.getElementById("demo").innerText = "<p>Paragraph</p>";
+        }
+        function innerhtml() {
+            document.getElementById("demo").innerHTML = "<h1>Heading</h1>";
+        }
+    </script>
+
+     <button onclick="innertext()">innertext</button>
+    <button onclick="innerhtml()">innerhtml</button>
+    <p id="demo"></p> -->
+
+    <!--================================================================= ADDING JAVASCRIPT STRING (JS OPERATORS) -->
+    <!-- <p id="demo"></p>
+    <script>
+        let x = 5;
+        x += 2;
+        // document.write(x);
+        document.getElementById("demo").innerHTML = "The value of x is " + x;
+    </script> -->
+
+
+    <!-- <p id="demo"></p>
+    <script>
+        let text = "what";
+        text += " a nice day";
+        // document.write(text);
+        document.getElementById("demo").innerHTML = text;
+    </script> -->
+
+    <!-- <script>
+        let text1 = "My name is";
+        let text2 = "Charvi";
+        let textmerge = text1 + "  " + text2;
+        document.write(textmerge);
+    </script> -->
+
+    <!-- <script>
+        let text1 = "My name is";
+        text1 += " Charvi";
+        document.write(text1);
+    </script> -->
+
+    <!-- <script>
+        let text1="Charvi";
+        let text2="Sarang";
+        let text3=text1.concat("  "+text2);
+        document.write(text3);
+    </script> -->
+
+    <!-- <script>
+        let a = 5;
+        let b = "charvi";
+        let result = a + b;
+        document.write(result);//5charvi
+    </script> -->
+
+    <!-- <script>
+        let a = 5;
+        let c = 4;
+        let b = "charvi";
+        let result = a + c + b;
+        document.write(result);//9charvi
+    </script> -->
+
+    <!-- <script>
+        let a = "charvi";
+        let b = 3;
+        let c = 5;
+        let result = a + b + c;
+        document.write(result);//charvi35
+    </script> -->
+
+    <!-- <script>
+        let a = 5;
+        let b = 5 + 2;
+        let c = "hello" + 4;
+        let d = a + b + c;
+        document.write(a + "<br>");//5
+        document.write(b + "<br>");//52
+        document.write(c + "<br>");//hello4
+        document.write(d);//12hello4
+    </script> -->
+
+    <!--==================================================================================== CAMPARSION OPERATORS -->
+    <!-- <p id="demo"></p> -->
+    <!-- <script> 
+        let a = 5;
+        //document.write("The value of a is " + a + "<br>");
+        // document.write((a == 8) + "<br>");//F
+        // document.write((a != 8) + "<br>");//T
+
+        // document.write((a == "5") + "<br>");//T
+        // document.write((a === "5") + "<br>");//F
+
+        // document.write((a != "5") + "<br>");//F
+        // document.write((a !== "5") + "<br>");//T
+
+        // document.write((8 != 8) + "<br>");//F
+
+        // ============================================BYID
+        // document.getElementById("demo").innerHTML =
+        //     (a == 5) + "<br>" +
+        //     (a != 5) + "<br>";
+    </script> -->
+
+
+    <!--==================================================================================== LOGICAL OPERATORS -->
+
+    <!-- <p id="demo"></p>
+    <script>
+        let a = 5;
+        let b = 6;
+        document.getElementById("demo").innerHTML =
+            (a !== 5 && b == 6) + "<br>" +
+            (a != 7 || b == 4) + "<br>" +
+            !(a != b);
+    </script> -->
+    <!--=====================================================================CONDITIONAL OPERATORS(TERNARY) -->
+    <!-- <p id="demo"></p>
+    <input type="text" id="age">
+    <button onclick="myFun()">check</button>
+    <script>
+        function myFun() {
+            let age = document.getElementById("age").value;
+            let vote = (age > 18) ? "voteable" : "not voteable";
+            document.getElementById("demo").innerHTML = `${vote}  is ready to vote`;
+
+            // if (isNaN(age)) {
+            //     document.write("Input is not a number");
+            // }
+            // else {
+            //     let a = (age > 18) ? "vote" : "not vote";
+            //     document.write(a);
+
+            // if (age > 18) {
+            //     document.write("vote");
+            // }
+            // else {
+            //     document.write("note vote");
+            // }
+            // }
+        }
+    </script> -->
+
+    <!-- <input type="text" id="age">
+    <br><br>
+    <button onclick="check()">Check</button>
+    <p id="demo"></p>
+
+
+    <script>
+        function check() {
+            let age = document.getElementById("age").value;
+            let vote = (age > 18) ? "vote" : "not voteable"
+            document.getElementById("demo").innerHTML = vote;
+        }
+    </script> -->
+
+    <!-- <script>
+        function check() {
+            let age = document.getElementById("age").value;
+            if (isNaN(age)) {
+                document.write("Input is not a number");
+            }
+            else {
+                let a = (age > 18) ? "voteable" : "notvoteable";
+                document.write(a);
+            }
+        }
+    </script> -->
+
+
+    <!--==================================================================================== OPTIONAL CHAINING -->
+    <!-- <script>
+        let a = null;
+        let b = "charvi";
+        // let c = a + b;
+        let c = a ?? b;
+        document.write(a);
+        document.write(c);//charvi
+    </script> -->
+    <!--==================================================================================== TYPE OF -->
+
+    <!-- <p id="demo"></p>
+    <script>
+        let a = 5;
+        let b = "nkk";
+        let c = null;
+        let d = c ?? a ?? b;
+        document.write(typeof a + "<br>");
+        document.write(typeof b + "<br>");
+        document.write(typeof c + "<br>");
+        document.write(d);
+
+        // document.getElementById("demo").innerHTML =
+        // typeof a + "<br>" + typeof b + "<br>" + typeof c + "<br>" + typeof d;
+    </script> -->
+    <!--==================================================================================== FUNCTION -->
+
+    <!-- <p id="demo"></p>
+    <script>
+        function myFunction(x, y) {
+            return "Value is "+(x+y);
+        }
+        document.getElementById("demo").innerHTML = myFunction(5, 9);
+    </script> -->
+
+    <!--==================================================================================== FUNCTION(To Convert From Fahrenheit to Celsius) -->
+
+    <!-- <p id="demo"></p>
+    <script>
+        function myFunction(f) {
+            return (f - 32) * 5 / 9;
+        }
+        document.getElementById("demo").innerHTML = "The value is " + myFunction(77) + ".";
+    </script> -->
+
+<!-- <input type="text" id="no">
+<button onclick="onCheck()">Check</button>
+<p id="demo"></p>
+<script>
+    function onCheck(){
+    let f=document.getElementById("no").value;
+    console.log(f);
+    let ans=(f-32)*5/9;
+    document.getElementById("demo").innerHTML=ans;
+}  
+ </script> -->
+
+    <!-- <p id="demo"></p>
+    <script>
+        function myFunction() {
+            let f = 77;
+            let cal = (f - 32) * 5 / 9;
+            document.write(cal + "<br>");
+            document.write(typeof f + "<br>");
+        }
+        myFunction();
+        //document.getElementById("demo").innerHTML = myFunction(typeof f + "<br>" + typeof cal)
+
+    </script> -->
+
+    <!--==================================================================================== OBJECTS -->
+    <p id="demo"></p>
+    <script>
+        // const user = { firstname: "charvi", lastname: "sarang" }
+        // const person = {
+        //     name: "John",
+        //     age: 30,
+        //     city: "New York",
+        //     date: new Date(),
+        //     salary: function () {
+        //         return 5000;
+        //     },
+        //     alpha: ['a', 'b', 'c', 'd']
+        // };
+        // document.getElementById("demo").innerHTML=Object.freeze(person);
+        // person.name="maxwell";
+        // console.log(person);
+
+        // document.getElementById("demo").innerHTML=Object.seal(person);
+        // person.name="maxwell";
+        // console.log(person);
+
+        // const result=Object.assign(user,person);
+        // console.log(result);
+
+        // document.getElementById("demo").innerHTML=Object.keys(person);
+        // document.getElementById("demo").innerHTML=Object.values(user);
+
+        // document.getElementById("demo").innerHTML=Object.hasOwn(person,'name');//True
+        // document.getElementById("demo").innerHTML=Object.hasOwn(user,'lastname');//False
+
+
+        // let a = document.getElementById("demo").innerHTML = JSON.stringify(person);
+        // console.log(a);
+        // let b = document.getElementById("demo").innerHTML = JSON.parse(a);
+        // console.log(b);
+        
+        // document.getElementById("demo").innerHTML = Object.keys(person);
+        // document.getElementById("demo").innerHTML = (Object.values(person));
+        // document.getElementById("demo").innerHTML = person.salary();
+        // document.getElementById("demo").innerHTML = person.date.getFullYear();
+        // document.getElementById("demo").innerHTML = person.alpha[2];
+        // document.getElementById("demo").innerHTML = person.alpha.length;
+
+        // const user = {
+        //     firstName: "mummy",
+        //     lastName: "pappa",
+        //     alphabets: ['a', 'b', 'c', 'd'],
+        //     living: {
+        //         city: "zai",
+        //         state: "maharashtra"
+        //     },
+        //     fullName: function () {
+        //         return user.firstName + " " + user.lastName;
+        //     },
+        //     salary: function () {
+        //         return 500000;
+        //     }
+        // }
+        // console.log(user);
+        // document.write(user);//object object O/P aave
+        // document.getElementById("demo").innerHTML = Object.keys(user);
+        //===================================GETTING KEY
+        // for (let key in user) {
+        //     console.log(key);
+        //     console.log(key + ":" + user[key]);
+        // }
+        //===================================ADD NEW KEY
+        // user.age = 26;
+        // console.log(user);
+        //===================================REPLACE VALUE WITH FIRSTNAME
+        // user.firstName = "sarang";
+        // console.log(user);
+        // document.write(user.firstName + "<br>");
+        // document.write(user['lastName'] + "<br>");
+        //===================================FULLNAME
+        // document.write("Full name is " + user.firstName + " " + user.lastName + "<br>");
+        //===================================DELETE THE KEY
+        // delete user.age;
+        // console.log(user);
+        //===================================ARRAY
+        // document.write(user.alphabets[2] + "<br>");
+        //===================================OBJECTS
+        // document.write(user.living.city + "<br>");
+        //===================================FULLNAME WITH FUNCTION
+        // document.write("Using Function " + user.fullName() + "<br>");
+        //===================================SALARY WITH FUNCTION
+        // document.write("Using Function " + user.salary() + "<br>");
+        //===================================CHECK HEIGHT KEY IS THERE OR NOT
+        // document.write('height' in user);
+    </script>
+
+    <!--====================================================================================FUNCTION (DATE)-->
+    <!-- =========================================WITH ID & FUNCTION -->
+    <!-- <button onclick="displayDate()">Try it</button>
+    <p id="demo"></p>
+    <script>
+        function displayDate() {
+            document.getElementById("demo").innerHTML = Date();
+        }
+    </script> -->
+
+    <!-- =========================================ONLY WITH BUTTON -->
+    <!-- <button onclick="this.innerHTML=Date()">Try it</button> -->
+
+    <!-- ==========================================WITH NORMAL (NO SCRIPT)-->
+    <!-- <p id="demo"></p>
+    <button onclick="document.getElementById('demo').innerHTML=Date()">Try it</button> -->
+
+    <!--=========================================================================================STRING -->
+    <!-- <p id="demo"></p>
+    <script>
+        let text1 = "This is me!!!!!";
+        let text2 = "Hiii"
+        document.getElementById("demo").innerHTML = text1 + " " + text2;
+    </script> -->
+
+    <!-- <p id="demo"></p>
+    <script>
+        let text1 = "This is me!!!!!";
+        let text2 = "Hiii";
+        let text3 = "Its me......"
+        document.getElementById("demo").innerHTML = text1 + " <br>" + text2 + "<br>" + text3;
+    </script> -->
+
+    <!-- <p id="demo"></p>
+    <script>
+        let text1 = "We are \"team\"of kabbadi";
+        let text2 = "We are the \'team\' of kjo-kho";
+        let text3 = "We are \\team\\ of kabbadi";
+        document.getElementById("demo").innerHTML = text1 + "<br>" + text2 + "<br>" + text3;
+    </script> -->
+
+    <!-- ========================================================================================SYMBOL DATATYPE -->
+    <!-- <script>
+        let email = Symbol();
+        const user = {
+            firstName: "charvi",
+            lastname: "sarang",
+        }
+        user[email] = "sarang@gmail.com";
+        document.write(user.lastname);
+        console.log(user);
+        for (const key in user) {
+            // console.log(key);
+            console.log(key + ":" + user[key]);
+        }
+    </script> -->
+    <!-- ========================================================================================STRING METHODS -->
+    <!--============================================================== LENGTH -->
+
+    <!-- <p id="demo"></p>
+    <script>
+        let text = "dfhbhvhfbhffbvf";
+        document.getElementById("demo").innerHTML = text.length;
+    </script> -->
+
+    <!--============================================================== SLICE -->
+    <!-- <p id="demo"></p>
+    <script>
+        let text = "Information Technology";
+        document.getElementById("demo").innerHTML =
+            text.slice(5) + "<br>"
+            + text.slice(2, 10) + "<br>"
+            + text.slice(-5) + "<br>"
+            + text.slice(-10, -4);
+    </script> -->
+
+    <!--============================================================== SPLICE-->
+
+    <!--==============================================================SUBSTR & SUBSTRING -->
+    <!-- <p id="demo"></p>
+    <script>
+        let text = "My name is charvi";
+        document.getElementById("demo").innerHTML = 
+        text.substr(2, 4) + "<br>" + 
+        text.substring(2, 5);
+    </script>  -->
+    <!-- SUBSTR==INDEX NO & NO OF CHARACTERS -->
+    <!-- SUBSTRING==INDEX NO & POSITION(NOT INCLUDE 5)-->
+
+    <!--============================================================== REPLACE -->
+    <!-- <p id="demo"></p>
+    <script>
+        let text = "Information Technology Information ";
+        document.getElementById("demo").innerHTML = text.replace(/Information/g, "CSS");
+    </script> -->
+    <!--============================================================== REPLACE-ALL -->
+    <!-- <p id="demo"></p>
+    <script>
+        let text = "I love cats. Cats are very easy to love. Cats are very popular.";
+        text = text.replaceAll("cats", "dogs");
+        text = text.replaceAll("Cats", "DOGS");
+        document.getElementById("demo").innerHTML = text;
+    </script> -->
+    <!--============================================================== UPPERCASE , LOWERCASE ,TRIM-TRIMSTART-TRIMEND -->
+    <!-- <p id="demo"></p>
+    <script>
+        let text = "    sbfffxcbvfbdhcvbhf                jhhgfftf         ";
+        document.getElementById("demo").innerHTML =
+            text.toUpperCase() + "<br>" +
+            text.toLowerCase() + "<br>" +
+            text.trim() + "<br>" +
+            text.trimStart() + "<br>" +
+            text.trimEnd() + "<br>";
+    </script> -->
+    <!--============================================================== CONCAT & CHARAT -->
+    <!-- <p id="demo"></p>
+    <script>
+        let text1 = "abc";
+        let text2 = "pqr";
+        //document.getElementById("demo").innerHTML = text1.concat(" " + text2 + "<br>");
+        document.write(text1.charAt(2));
+    </script> -->
+
+    <!--============================================================== PADSTART & PADEND -->
+    <!-- <p id="demo"></p>
+    <script>
+        let text = "M";
+        document.getElementById("demo").innerHTML = text.padStart(15, "C") + "<br>" + text.padEnd(5, "U");
+    </script> -->
+    <!-- ==============================================================================================ARRAY -->
+    <!-- <p id="demo"></p> -->
+    <script>
+        // const cars = ["Saab", "Volvo", "BMW"];
+        // document.write(cars.length);//3
+        // document.getElementById("demo").innerHTML = cars.length=0+"<br>";
+        // document.write(cars.length);
+
+
+        // const cars = [];
+        // cars[0] = "abc";
+        // cars[1] = "pqr";
+        // cars[2] = "xyz";
+        // document.write(cars + "<br>");
+        // cars.push("abcjbd");
+        // document.write(cars + "<br>");
+        // document.write(cars[2] + "<br>");
+
+        // const fruits = ["mango", "papaya", "apple", "banana", "orange", "guava","kiwi","che"];
+        // document.write(fruits + "<br>");
+        //============================================================================= LENGTH
+        // document.write(`The length is ${fruits.length}` + "<br>");
+        //============================================================================= PUSH
+        //fruits.push("charvi");
+        // document.write(`Push is ${fruits}` + "<br>");
+        //============================================================================= POP
+        // fruits.pop();
+        // document.write(fruits + "<br>");
+        //============================================================================= SHIFT
+        // fruits.shift();
+        // document.write(fruits + "<br>" + "<br>");
+        //============================================================================= UNSHIFT
+        // fruits.unshift("charvi");
+        // document.write(fruits + "<br>");
+        //============================================================================= INCLUDES
+        // let a = fruits.includes("charvi");
+        // document.write(a + "<br>");
+        //============================================================================= CONCAT
+        // let x = ['a', 'b', ' c'];
+        // let y = ['p', 'q', 'r'];
+        // let z = x.concat(y);
+        // document.write(z + "<br>");
+        //============================================================================= FILTER
+        // const fruit = ["mabhbh", "papaya", "kiw", "apple", "banana", "orange", "guava", "kiw"];
+        // let filterwords = fruit.filter(word => word.length < 4);
+        // document.write(filterwords + "<br>");
+
+        // const no = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        // document.write(no.filter(w => w % 2 == 0) + "<br>");
+        // document.write(no.filter(w => w % 2 == 1) + "<br>");
+
+        //============================================================================= FIND
+        // document.write(`Find is ${fruit.find(word => word.length > 5)}` + "<br>");
+
+        //============================================================================= FINDINDEX
+        // document.write(fruit.findIndex(word => word.length<4) + "<br>");//2
+
+        //================================================================================================ FOREACH
+        // document.write(fruit.forEach(word => console.log(word)) + "<br>");
+        //============================================================================= REDUCE
+        // const number = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        // document.write(number.reduce(w => w + 10) + "<br>");
+        //============================================================================= SOME
+        // document.write(fruit.some(w => w.length > 5) + "<br>");
+        //============================================================================= EVERY
+        // document.write(fruit.every(w => w.length < 3) + "<br>");
+        //============================================================================= INDEXOF
+        // document.write(fruit.indexOf("kiw") + "<br>");
+        //============================================================================= LASTINDEXOF
+        // document.write(fruit.lastIndexOf("kiw") + "<br>")
+        //================================================================================================== ENTRIES
+
+        //============================================================================= MAP
+        // const num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        // document.write(`Map is${num.map(x => x * 2)}` + "<br>");
+        //============================================================================= SLICE
+        // const fruit = ["ma", "papaya", "kiw", "apple", "banana", "orange", "guava", "kiw"];
+        // document.write(fruit.slice(-2) + "<br>");
+        // document.write(fruit.slice(3) + "<br>");
+        // document.write(fruit.slice(3, 5));
+        // document.write(fruit.slice(-7, -1));
+        //============================================================================= SPLICE
+        // const alpha=['a','b','c','d','e']
+        // document.write(alpha.splice(2,2));
+        //============================================================================= REVERSE
+        // document.write(fruit.reverse() + "<br>" + "<br>");
+        //============================================================================= SORT
+        // document.write(`Sorting is ${fruit.sort()}` + "<br>");
+        //============================================================================= JOIN
+        // document.write(fruit.join("5") + "<br>");
+        //============================================================================= FLAT
+
+        // const n = [1, 2, 3, 4, 5, 6, [[7, 8]]];
+        // console.log(n.flat());
+        // document.write(n.flat());
+        //======================================================================================================DATE
+        //=============================================================================GET AND SET METHOD
+        // let d = new Date();
+        // let d = new Date("2022-03-12");
+        // let d = new Date(2000);
+        // document.write(d);
+        // document.getElementById("demo").innerHTML=d;
+        // document.getElementById("demo").innerHTML=d.toString();
+        // document.getElementById("demo").innerHTML = d.toDateString();//Readable format ma aave
+        // document.getElementById("demo").innerHTML = d.toUTCString();//UTC standard
+        // document.getElementById("demo").innerHTML = d.toISOString();//International standard
+
+        // document.getElementById("demo").innerHTML = d.getFullYear();//only year
+        //  document.getElementById("demo").innerHTML = d.getMonth()+1;
+        //  document.getElementById("demo").innerHTML = d.getHours();
+
+        // const months = ["January", "February", "March", "April", "May", "June",
+        // "July", "August", "September", "October", "November", "December"];
+
+        // const x = new Date("1-3-2020");
+        // let show1 = months[x.getMonth()];
+        // document.write(show1);
+
+
+
+        // const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        // let y = new Date();
+        // let show = days[y.getDay()];
+        // document.write(show);
+
+        // document.write(d.getDate() + "<br>");//aaj ni tarik
+        // document.write(d.getFullYear() + "<br>");//2022
+        // document.write(d.getDay() + "<br>");//aaj thursday toh 4
+        // document.write(d.getHours() + "<br>");
+        // document.write(d.getMinutes() + "<br>");
+        // document.write(d.getSeconds() + "<br>");
+        // document.write(d.getTime() + "<br>");
+        // document.write(d.now());//kbr ni padti
+
+        // const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        // let d = new Date("12-15-2022");
+        // let show = days[d.getDay()];
+        // document.write(show);
+
+
+        // const a = new Date();
+        // a.setFullYear(2022);
+        // document.getElementById("demo").innerHTML = a;
+
+        // a.setDate(25);
+        // document.getElementById("demo").innerHTML = a;
+
+        // a.setHours(18);
+        // document.getElementById("demo").innerHTML = a;
+
+        // a.setMinutes(45);
+        // document.getElementById("demo").innerHTML = a;
+
+        // a.setMilliseconds(111);
+        // document.getElementById("demo").innerHTML = a;
+
+        // a.setMonth(1);
+        // document.getElementById("demo").innerHTML = a;
+
+        // a.setSeconds(45);
+        // document.getElementById("demo").innerHTML = a;
+
+        // a.setTime(5);
+        // document.getElementById("demo").innerHTML = a;
+
+        
+        // const dd=new Date(2018,11,13);
+        // dd.setDate(dd.getDate()+50);
+        // document.getElementById("demo").innerHTML=dd;
+
+        //==============================================================================================MATH METHOD
+        // document.getElementById("demo").innerHTML = Math.PI;;
+        // document.getElementById("demo").innerHTML = Math.floor(Math.random()*10);//less than 1 ma aave(0-1 na vache aave)
+        // document.getElementById("demo").innerHTML = Math.abs(-8894.5);
+        // document.getElementById("demo").innerHTML = Math.cbrt(27);
+        // document.getElementById("demo").innerHTML = Math.sqrt(4);
+        // document.getElementById("demo").innerHTML = Math.ceil(4.1);//upper ni value lai ==5
+        // document.getElementById("demo").innerHTML = Math.floor(4.9);//a niche ni value lei==4
+        // document.getElementById("demo").innerHTML = Math.round(4.5);
+        // document.getElementById("demo").innerHTML = Math.round(4.4);
+        // document.getElementById("demo").innerHTML = Math.max(4, -4, 6, 8, 5, -2);
+        // document.getElementById("demo").innerHTML = Math.min(4.1, 5.1, 9, -7, 2, 1);
+        // document.getElementById("demo").innerHTML = Math.pow(2, 3);//2 base che power 3
+        // document.getElementById("demo").innerHTML = Math.trunc(13.55);//point value ne kadi nakhe
+        // document.getElementById("demo").innerHTML = Math.E;
+        //==============================================================================================SWITCH
+
+        // var day = 5;
+        // switch (day) {
+        //     case 1:
+        //         document.write("Monday");
+        //         break;
+        //     case 2:
+        //         document.write("Tuesday");
+        //         break;
+        //     case 3:
+        //         document.write("Wednesday");
+        //         break;
+        //     case 4:
+        //         document.write("Thursday");
+        //         break;
+        //     case 5:
+        //         document.write("Friday");
+        //         break;
+        //     case 6:
+        //         document.write("Saturday");
+        //         break;
+        //     case 7:
+        //         document.write("Sunday");
+        //         break;
+        //     default:
+        //         document.write("Invalid Day");
+        // }
+
+
+        // RECENT DATE PRACTICE
+
+        // let d = new Date();
+        // switch (d.getDay()) {
+        //     case 1:
+        //         d = "Monday";
+        //         break;
+        //     case 2:
+        //         d = "Tuesday";
+        //         break;
+        //     case 3:
+        //         d = "Wednesday";
+        //         break;
+        //     case 4:
+        //         d = "Thursday";
+        //         break;
+        //     case 5:
+        //         d = "Friday";
+        //         break;
+        //     case 6:
+        //         d = "Saturday";
+        //         break;
+        //     case 7:
+        //         d = "Sunday";
+        //         break;
+        //     default:
+        //         d = "Invalid Day";
+        // }
+        // document.getElementById("demo").innerHTML = "Today is " + d;
+
+        //============================================================================IF/IF-ELSE/IF-ELSE-IF-ELSE
+        // let marks = parseInt(prompt("enter the no"));
+        // if (marks > 90) {
+        //     document.write("Great Marks");
+        // }
+        // else if (marks == 90) {
+        //     document.write("Better")
+        // }
+        // else {
+        //     document.write("Not Great Marks");
+        // }
+
+        // let a = parseInt(prompt("enter the no"));
+        // if (a > 0) {
+        //     document.write("Positive")
+        // }
+        // else if (a < 0) {
+        //     document.write("Negative");
+        // }
+        // else {
+        //     document.write("Number is Zero");
+        // }
+
+        //=====================================================================================LOOPING
+        // ==========================FOR LOOP
+        // const cars = ['BMW', 'Swift', "Polo", "Alto", "Foturner"];
+        // let w = cars.forEach(ww => document.write(ww+"<br>"));
+        // document.write(cars + "<br>");
+        // document.getElementById("demo").innerHTML = w;
+        // let text;
+        // for (let i = 1; i < cars.length; i++) {
+        //     document.write(i)+"<br>";
+        //     text = " "+cars[i];
+        //     document.write(text + "<br>");
+        // }
+       
+
+
+        //===========================FOR IN
+        // const user = {
+        //     firstName: "Charvi",
+        //     lastname: "Sarang"
+        // }
+        // for (const key in user) {
+        //     document.write(key + "<br>");
+        //     // document.write(key + ":" + user[key] + "<br>")
+        // }
+        //===========================FOR OF
+        // const cars = ['BMW', 'Swift', "Polo", "Alto", "Foturner"];
+        // document.getElementById("demo").innerHTML = cars.length-2;
+
+        // document.getElementById("demo").innerHTML = cars;
+        // document.write(cars);
+        // for (const x of cars) {
+        //     document.write(x + "<br>");
+        // }
+
+        // let text = "Javascript";
+        // for (let letter of text) {
+        //     document.write(letter + "<br>");
+        // }
+
+        //============================================================================================SET
+        // const alpha = new Set(['a', "a", 'b', 'c', 'd', 'e']);
+        // document.write("starting length is " + alpha.size + "<br>");//6 reh pan unique value lei dplicate kadi nakhe atle 5 lei
+        // alpha.add("m");// a count thase
+        // alpha.add(3145);//a count thase
+        // alpha.add("true");//a count thase
+        // alpha.add("false");//a count thase
+        // alpha.add("b");// a count ni thase
+        // document.write(`The size of set is ${alpha.size}` + "<br>");
+
+
+        // alpha.has("e");//True K False
+        // console.log(alpha.has("false"));//True K False
+
+        // document.write(alpha.delete("a"));
+        // alpha.delete("c");
+
+        // document.write(`Delete krne k bad ${alpha.size}`);
+       
+        // FOREACH
+        // document.write(alpha.forEach(item => { console.log(item) }));
+
+        // ITERATOR
+        // for (let x of alpha) {
+        //     console.log(x);
+        //     document.write(x);
+        // }
+
+        // document.getElementById("demo").innerHTML = alpha.values();
+
+        //============================================================================================MAP
+        // const fruit = new Map([["apple", "jbjbe"], ["mango", 500], ["banana", 600]]);
+        // document.getElementById("demo").innerHTML = fruit.get("mango");
+
+        // const fruit = new Map();//ADDING 2ND WAY
+        // fruit.set("abc", "dkrvnrj100");
+        // fruit.set("pqr", 200);
+        // fruit.set("xyz", 300);
+        // fruit.set("lmn", 400);
+        // fruit.set("abc", 500)
+        // document.getElementById("demo").innerHTML = fruit.get("abc");
+        // document.write(fruit.size + "<br>");
+        // document.write(fruit.delete("abcd") + "<br>");
+        // document.write(fruit.get("apple"));
+
+
+        //============================================================================TYPE CONVERSION
+        // let a = String(Date());
+        // document.write(a + "<br>" + typeof a);
+
+        // let a = String(466);
+        // document.write(a + "<br>" + typeof a);
+
+        // let a = String("vhcfx");
+        // document.write(a + "<br>" + typeof a);
+
+        // let a = 5;
+        // document.write(a.toString());
+        // console.log(a.toString());
+
+        // let a = Number("111");
+        // document.write(a + "<br>" + typeof a);
+
+        // let a = Date(111);
+        // document.write(a + "<br>" + typeof a)
+
+        // let a = Number(false);
+        // document.write(a + "<br>" + typeof a);//0 and number
+
+        // let a = String(false);
+        // document.write(a + "<br>" + typeof a);//false and string
+
+
+
+        // let a = parseInt(32.598);
+        // document.write(a.toFixed(2) + "<br>" + typeof a);//2 atle 32 pachi 2 zero(32.00 a ans aave)
+
+        // let a = parseFloat(658.148);
+        // document.write(a.toExponential(10) + "<br>" + typeof a);
+        //==========================================================================CLASS
+        // class car {
+        //     constructor(name, age) {
+        //         this.name = "charvi",
+        //         this.year = "1"
+        //     }
+        // }
+        // const myCar = new car();
+        // document.getElementById("demo").innerHTML = "My Car Name is " + myCar.name + " " + "I will take within " + myCar.year + "years .";
+
+        //==========================================================================FUNCTION
+        // =============================NORMAL FUNCTION
+        // let a = function () {
+        //     return "Hello World";
+        // }
+        // document.getElementById("demo").innerHTML = a();
+
+
+        // function myFun(a, b) {
+        //     return 7 * 8;
+        // }
+        // document.getElementById("demo").innerHTML = myFun(4, 5);
+
+
+        // =============================ARROW FUNCTION
+        // ()=>{}
+        // let a = (a, b) => {
+        //     return a * b;
+        // }
+        // document.getElementById("demo").innerHTML = a(5, 8);
+
+
+        // let a = (a, b) => {
+        //     return a * b;
+        // }
+        // document.getElementById("demo").innerHTML = a(5, 8);
+
+        //=============================IMEDIALTELY SELF INVOKING FUNCTION
+        // (function () {
+        //     let text = "Hello";
+        //     console.log(text);
+        //     alert("Hello");
+        //     document.write("Hello");
+        // })();
+
+
+        // let myPromise = new Promise((resolve, reject) => {
+        //     let a = 4, b = 5;
+        //     if (a == b) {
+        //         console.log(true);
+        //     }
+        //     else {
+        //         console.log(false);
+        //     }
+        // });
+        // myPromise.then((value) => { console.log(value) })
+        //     .catch((error) => { console.log(error) })
+
+
+        //====================================================FOR LOOP(TABLE)
+        // let no = parseInt(prompt("enter the no"));
+        // for (var i = 1; i <= 10; i++) {
+        //     document.write(`${no}x${i}=${no*i}`+"<br>");
+        // }
+
+        //====================================================FOR LOOP + FUNCTION (TABLE)
+        // function myTable(a) {
+        //     for (var i = 1; i <= 10; i++) {
+        //         document.write(i * a + "<br>");
+        //     }
+        // }
+        // myTable(5);
+
+        // ===============================================================================SCOPE
+        //====================================================BLOCK SCOPE
+        // let a = 3;
+        // (function () {
+        //     let a = 5;
+        //     const b = 10;10
+        //     console.log(a);
+        //     console.log(b);
+        // })();
+        // console.log(a);
+        // ========================================================================================PRIME NUMBER
+        
+        // =======================================================================================ADDITION IN 3 WAYS
+
+        // var a=parseInt(prompt("enter the no1"));
+        // var b=parseInt(prompt("enter the no2"));
+        // var result=a+b;
+        // document.getElementById("demo").innerHTML=result;
+
+
+        // var a=3;
+        // var b=9;
+        // var result=a+b;
+        // document.getElementById("demo").innerHTML=result;
+
+
+        // function add(){
+        //     var a=9;
+        //     var b=8;
+        //     var result=a+b;
+        //     document.getElementById("demo").innerHTML=result;
+        // }
+        // add();
+
+    // =======================================================================================AREA OF CIRCLE
+    // const pi=3.14;
+    // var r=2;
+    // var areaOfCircle=pi*r*r;
+    // document.getElementById("demo").innerHTML=areaOfCircle;
+
+    // function circle(){
+    // const pi=3.14;
+    // var r=2;
+    // var areaOfCircle=pi*r*r;
+    // document.getElementById("demo").innerHTML=areaOfCircle;
+    // }
+    // circle();
+
+    // const pi=3.14;
+    // var r=prompt("enter the no");
+    // var areaOfCircle=pi*r*r;
+    // document.getElementById("demo").innerHTML=areaOfCircle;
+
+
+    // =======================================================================================F To C
+    // function myFun(f){  
+    // var formula=(f-32)*5/9;
+    // document.getElementById("demo").innerHTML=formula;
+    // }
+    // myFun(77);
+
+
+//    function myFun(f){
+//    return (f-32)*5/9; 
+//    }
+//    document.getElementById("demo").innerHTML=myFun(77);
+
+// let a=(f)=>{
+//     return (f-32)*5/9;
+// }
+// document.getElementById("demo").innerHTML=a(80);
+
+// let formula=(f)=>{return (f-32)*5/9}
+// document.getElementById("demo").innerHTML=formula(77);
+// ====================================NOT RUN PRIME NUMBER
+// let no=prompt("enter the no");
+// if(no==1){
+//     document.write("Not Prime");
+// }
+// else if(no<1){
+//     document.write("Not Prime");
+// }
+// else{
+// for(let i=2;i<no;i++){
+//     if(no%i ==0){
+//     var res=`${no} Not Prime`;
+//     break;
+//     }
+//  else{
+//     var res=`${no}Prime`;
+//  }   
+// }
+// console.log(res);
+// }
+
+// const number=[1,2,3,4,5,6,7,8,9];
+// var result=number.filter(no=>{
+//     for(var i=2;i<=Math.sqrt(no);i++){
+//         if(no%i==0){
+//             return false;
+//         }
+//     }
+//     return true;
+// });
+// console.log(result);
+//=================================================SWAPPING
+//===========================SWAPPING 2 VARIABLES(Opposite value thai java joyo tine swapping kai)
+
+// let a=5;
+// let b=10;
+// a=a*b;//a+b//5+10=15     
+// b=a/b;//a-b//15-10=5
+// a=a/b;//a-b//15-5=10
+// console.log(a);//10
+// console.log(b);//5
+
+//===========================SWAPPING 3 VARIABLES
+// let a=5;
+// let b=10;
+// temp=a;
+// a=b;
+// b=a;
+// console.log(temp);//5
+// console.log(a);//10
+// console.log(b);//10
+
+//=====================================================EVEN & ODD
+// function myFun(){
+// let number=prompt("enter the no");
+// if(number<0){
+//     document.write("No is negative");
+// }
+// else if(number>0){
+// document.write("No is positive");
+// }
+// else{
+//     document.write("No is zero");
+// }
+// }myFun();
+
+// function myFun(){
+//     let number=prompt("enter the no");
+//     let result=(number>0)?"positive":"negative";
+//     document.write(result);
+// }myFun();
+
+
+
+// function myFun(){(1087)
+//     let number=document.getElementById("number").value;
+//     if(number<0){
+//         document.write("No is negative");
+//     }
+//     else if(number>0){
+//         document.write("No is positive");
+//     }
+//     else{
+//         document.write("No is zero");
+//     }
+//     document.getElementById("demo").innerHTML=myFun();
+// }
+
+
+
+//======================================ADDITION OF 2 NO'S(1091)
+// function onAdd(){
+// let no1=document.getElementById("no1").value;
+// let no2=document.getElementById("no2").value;
+// let result=parseInt(no1)+parseInt(no2);
+//    document.getElementById("demo").innerHTML=result;
+// }
+</script>
+<!-- <input type="text" id="number">
+<button onclick="myFun()">Check</button> -->
+
+<!-- ADDITION Nu -->
+<!-- Enter No 1<input type="text" id="no1"><br>
+Enter No 2<input type="text" id="no2"><br>
+<button onclick="onAdd()">Add</button>
+<p id="demo"></p> -->
+</body>
+
+</html>

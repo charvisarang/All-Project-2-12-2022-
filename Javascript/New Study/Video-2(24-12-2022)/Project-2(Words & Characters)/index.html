@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: blue;
+            color: white;
+            padding: 20px;
+            margin: 0;
+        }
+
+        textarea {
+            width: 99.5%;
+            border: 2px solid blue;
+        }
+
+        p {
+            background-color: blue;
+            color: white;
+            font-size: 20px;
+            padding: 15px;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Words & Convertor</h1>
+        <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+        <p><span id="word">0</span> words and <span id="char">0</span> characters</p>
+    </div>
+</body>
+<script>
+    let textarea = document.getElementById("textarea");
+    console.log(textarea);
+    textarea.addEventListener("input", function () {
+        let characters = this.value;
+        document.getElementById("char").innerHTML = characters.length;
+
+        characters = characters.trim();
+        let words = characters.split(" ");
+        console.log(words);
+        let cleanlist = words.filter(function (ele) {
+            return ele != "";
+        })
+        document.getElementById("word").innerHTML = cleanlist.length;
+    });
+
+</script>
+
+</html>

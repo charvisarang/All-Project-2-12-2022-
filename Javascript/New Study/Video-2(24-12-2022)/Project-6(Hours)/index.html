@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="time">
+            <span id="hr" class="digit">00</span>
+            <span class="text">Hr</span>
+            <span id="min" class="digit">00</span>
+            <span class="text">Min</span>
+            <span id="sec" class="digit">00</span>
+            <span class="text">Sec</span>
+            <span class="digit" id="count">00</span>
+        </div>
+        <div class="btn-container">
+            <button class="btn" id="start" onclick="onStart()">Start</button>
+            <button class="btn" id="stop" onclick="onStop()">Stop</button>
+            <button class="btn" id="reset" onclick="onReset()">Reset</button>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

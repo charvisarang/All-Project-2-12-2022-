@@ -5,7 +5,7 @@ console.log("ES6");
 //     console.log(a);
 //     var a = 5;
 //     let b = 10;
-//     const c = 15;  
+//     const c = 15;
 // }
 // nam();
 
@@ -17,65 +17,63 @@ console.log("ES6");
 
 // ==============================================================1)Single line
 
-// let sum1 = (a,b) => a+b;
-// console.log(sum1(5,2));
+// let sum1 = (a, b) => a + b;
+// document.write(sum1(5, 5));
+// console.log(sum1(5, 2));
 
 
-// let sum = (a,b) => a+b;
-// console.log(`Addition is=${sum(5,6)}`);
+// let sum = (a, b) => a + b;
+// document.write(`Addition is=${sum(5, 6)}`);
 
-//let sub=(a,b)=>a-b;
-//console.log(`Substraction is=${sub(6,5)}`);
+// let sub = (a, b) => a - b;
+// console.log(`Substraction is=${sub(6, 5)}`);
 
 // let div=(a,b)=>a/b;
 // console.log(`The division is ${div(4,2)}`);
 
-// let multi=n=>n*2;
+// let multi = n => n * 3;
 // console.log(`multiplication is=${multi(5)}`);
-
-// let totalsum=(a,b)=>a+b;
-// console.log(totalsum(5,6));
 
 //==============================================================2)Multi line
 // let number = (no1, no2) => {
-//     let add = no1 + no2;
-//     return add;
+//     return no1 + no2;
+
 // }
-// let no=number(5,6)
+// let no = number(5, 6);
 // console.log(no);
 
 
 
-//======================================3)Multi-Line String========================Back-Stick(jivu lakhe evu print thai by using backstick)
-// let longstring=`hiiiiiiii,
+//======================================3)Multi-Line String===========Back-Stick(jivu lakhe evu print thai by using backstick)
+// let longstring = `hiiiiiiii,
 // byyyyyyyyyy,
 // goooooooddd`;
 // console.log(`Message is :${longstring}`);
 
-// //==============================================================4)Template Literals
-// const myfirstname="Charvi";
-// const mylastname="Sarang";
-// const myfullname=(`My Name is ${myfirstname} ${mylastname}`);
+//==============================================================4)Template Literals
+// const myfirstname = "Charvi";
+// const mylastname = "Sarang";
+// const myfullname = (`My Name is ${myfirstname} ${mylastname}`);
 // console.log(myfullname);
 
 //==============================================================5)Parameters Handling
 
 //=============================================================5.1)Default Parameters
-let sum=(a,b=20,c=0)=>{
-console.log(`The value of a is ${a}`);
-console.log(`The value of b is ${b}`);
-console.log(`The value of c is ${c}`);
-}
+// let sum = (a, b = 20, c = 0) => {
+//     console.log(`The value of a is ${a}`);
+//     console.log(`The value of b is ${b}`);
+//     console.log(`The value of c is ${c}`);
+// }
 //sum();
-sum(20,4 ,5);
+// sum(20, 4, 5);
 
 //=======================================5.2)Rest Parameters(Index/Array wise aavi jai)======SPECIALITY 3 DOTS=> ...
 
-// function fun(...args){
-//     console.log("Argruments",args);
-// }
-//  let a=fun(1,2,3,4)
-// console.log(a);
+function fun(...args) {
+    console.log(args);
+}
+let a = fun(1, 2, 3, 4);
+
 
 
 // function some(a,b,...c){
@@ -91,7 +89,7 @@ sum(20,4 ,5);
 // function fun({a="abc",b="bcd",c="cde"}){
 // console.log(a,b,c);
 // }
-// fun(); 
+// fun();
 
 
 //=======================================5.3)Spread Operator

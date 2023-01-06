@@ -1,0 +1,14 @@
+<p>user-list works!</p>
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Age</th>
+    </tr>
+    <tr *ngFor="let items of data">
+        <td>{{items.name}}</td>
+        <td>{{items.email}}</td>
+        <td>{{items.age}}</td>
+        <button (click)="onEdit(items)">Edit</button>
+    </tr>
+</table>

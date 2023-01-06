@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- ===============================================OBJECT -->
+    <p id="demo"></p>
+    <script>
+        //1)ASSIGN
+        // const user1 = { color: "red" };
+        // const user2 = { hobbies: "Dance" };
+        // let a = document.getElementById("demo").innerHTML = Object.assign(user1, user2);
+        // console.log(a);
+
+        //2)FREEZE
+        // document.getElementById("demo").innerHTML = Object.freeze(user1);
+        // user1.color = "black";
+        // document.getElementById("demo").innerHTML = user1.color;
+
+        //3)SEAL
+        // document.getElementById("demo").innerHTML = Object.seal(user1);
+        // user1.color = "black";
+        // document.getElementById("demo").innerHTML = user1.color;
+
+        //4)HASOWN
+        // document.getElementById("demo").innerHTML = Object.hasOwn(user1, 'color');
+
+
+
+
+        const person = {};
+        person.firstName = "charvi";
+        person.lastName = "sarang";
+        person.age = 25;
+        //document.getElementById("demo").innerHTML = person.firstName;
+        //document.getElementById("demo").innerHTML = person["firstName"];
+
+        // const person = new Object();
+        // person.firstName = "charu";
+        // person.lastName = "sarang";
+        // document.getElementById("demo").innerHTML = person.firstName.toUpperCase();
+
+        //=====ADDING VALUE
+        // person.age = 26;
+        //console.log(person);
+
+        //=====CHANGING VALUE
+        // person.firstName = "charvi";
+        //console.log(person);
+
+        //=====DELETING VALUE
+        // delete person.age;
+        //console.log(person);
+
+        //=====CHECK VALUE
+        //console.log('height' in person);//False
+
+        //=====2 WAYS TO ACCESS
+        // console.log(person.firstName);
+        // console.log(person["firstName"]);
+
+        //=====ONLY PROPERTIES
+        //document.getElementById("demo").innerHTML = Object.keys(person);
+        // let text = "";
+        // for (const keys in person) {
+        //     text += keys;
+        //     document.getElementById("demo").innerHTML = text;
+        // }
+
+        //=====ONLY VALUES
+        // document.getElementById("demo").innerHTML = Object.values(person);
+        // let text = "";
+        // for (const values in person) {
+        //     text += person[values] + "<br>";
+        //     document.getElementById("demo").innerHTML = text;
+        // }
+
+        //=====NESTED OBJECT
+        // const user = {
+        //     firstName: "Charvi",
+        //     lastName: "Sarang",
+        //     age: 25,
+        //     cars: {
+        //         c1: { name: "BMW", color: "black" },
+        //         c2: "Swift",
+        //         c3: "Polo"
+        //     }
+        // }
+
+        // document.getElementById("demo").innerHTML = user.cars.c2;
+        // document.getElementById("demo").innerHTML = user.cars["c2"];
+        // document.getElementById("demo").innerHTML = user.cars.c1.color;
+        // document.getElementById("demo").innerHTML = user["cars"]["c1"]["color"];
+
+        //=====OBJECT METHOD(FUNCTION)
+        // const user = {
+        //     firstName: "Charvi",
+        //     lastName: "Sarang",
+        //     age: 25,
+        //     cars: {
+        //         c1: { name: "BMW", color: "black" },
+        //         c2: "Swift",
+        //         c3: "Polo"
+        //     },
+        //     fullName: function () {
+        //         return this.firstName + " " + this.lastName;
+        //     },
+        //     salary: function () {
+        //         return 5000;
+        //     },
+        //     today: new Date()
+        // }
+        // document.getElementById("demo").innerHTML = user.fullName().toUpperCase();
+        // document.getElementById("demo").innerHTML = user.salary();
+
+        //=====OBJECT STRINGNIFY
+        // document.getElementById("demo").innerHTML = JSON.stringify(user);
+        // document.getElementById("demo").innerHTML = JSON.stringify(user.fullName());
+
+
+        //=====2 OBJECT HOW CANE BE CONNECT TO PASS DATA FROM 1 OBJECT TO ANOTHER
+        // const person1 = {
+        //     firstName: "charvi",
+        //     lastName: "sarang",
+        //     fullName() {
+        //         return this.firstName + " Love " + person2.firstName;
+        //     },
+        //     age() {
+        //         return person2.age;
+        //     }
+        // }
+        // const person2 = {
+        //     firstName: "manthan",
+        //     lastname: "machhi",
+        //     age: 25
+        // }
+        //document.getElementById("demo").innerHTML = person1.fullName();
+        // document.getElementById("demo").innerHTML = person1.age();
+        // console.log(person1, person2);
+
+        // console.log(person1.firstName + " Love " + person2.firstName);
+        // document.getElementById("demo").innerHTML = person1.firstName + " love " + person2.firstName;
+
+
+        //=====GET-Gets the value for a key in a Map & SET-Sets the value for a key in a Map
+        // const user = {
+        //     firstName: "Charvi",
+        //     lastName: "Sarang",
+        //     language: "",
+        //     set newlanguage(newlanguage) {
+        //         return this.language = newlanguage.toLocaleUpperCase();
+        //     },
+        //     age: 25,
+        //     get name() {
+        //         return this.lastName.toLocaleUpperCase();
+        //     },
+        //     cars: {
+        //         c1: { name: "BMW", color: "black" },
+        //         c2: "Swift",
+        //         c3: "Polo"
+        //     },
+        //     get fullName() {
+        //         return this.firstName + " " + this.lastName;
+        //     },
+        //     today: new Date()
+        // }
+        // user.newlanguage = "france";
+        // document.getElementById("demo").innerHTML = user.language;
+        // document.getElementById("demo").innerHTML = user.name;
+        // document.getElementById("demo").innerHTML = user.fullName;
+        // document.getElementById("demo").innerHTML = user.cars.c1.color;
+        // document.getElementById("demo").innerHTML = user["cars"]["c1"]["color"]
+
+
+        //=====OBJECT CONSTRUCTOR
+        // function Person(name, age, place) {
+        //     this.name = name;
+        //     this.age = age;
+        //     this.place = place;
+        //     this.color = "red";
+        // }
+        // const myFather = new Person("Pappa", "54", "Zai");
+        // const myMother = new Person("Mummy", "48", "Zai");
+        // myFather.favourite = "Cricket";
+        // Person.prototype.food = "Dahipuri";
+        // // document.getElementById("demo").innerHTML = "Food is " + myFather.food + myMother.food + "My Father favourite color is " + myFather.color + "." + "My Mother Favourite place is " + myMother.place + ".";
+        // document.getElementById("demo").innerHTML = `Food is ${myFather.food}`;
+
+        // function User(name, age, place) {
+        //     this.name = name;
+        //     this.age = age;
+        //     this.place = place;
+        //     this.color = "black";
+        // }
+        // const myself = new User("Charvi", "26", "Zai");
+        // myself.favourite = "Travelling";
+        // User.prototype.food = "kaibhichaleavetoh";
+        // document.getElementById("demo").innerHTML = myself.food;
+
+
+        //=====ITERATOR OBJECT
+        // let string = "Hello World";
+        // let text = "";
+        // for (const x of string) {
+        //     text += x + "<br>";
+        //     document.getElementById("demo").innerHTML = text;
+        // }
+
+        // const array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        // let text = "";
+        // for (const no of array) {
+        //     text += no + "<br>";
+        //     document.getElementById("demo").innerHTML = text;
+        // }
+
+        //=====SETS--ITS IS A COLLECTION OF UNIQUES VALUES.
+        // --EACH VALUE OCCURS ONLY ONCE AT A TIME IN A SET.
+
+        // const alpha = new Set(['a', 'b', 'c', 'd', 'e', 'f']);
+        // document.getElementById("demo").innerHTML = alpha.size;
+        // alpha.add("P");
+        // alpha.add("A");
+        // alpha.add("p");
+        // alpha.add("p");//a ni lidhu
+        // alpha.add("a");//a ni lidhu
+        // document.getElementById("demo").innerHTML = alpha.size;
+
+        // let text = "";
+        // for (const x of alpha) {
+        //     text += x + "<br>";
+        // }
+        // document.getElementById("demo").innerHTML = text;
+
+
+        // FOR EACH
+        // let text = "";
+        // alpha.forEach(no => {
+        //     text += no + "<br>";
+        // });
+        // document.getElementById("demo").innerHTML = text;
+
+        // let text = "";
+        // for (const x of alpha.values()) {
+        //     text += x + "<br>";
+        // }
+        // document.getElementById("demo").innerHTML = text;
+
+
+        //=====ENTRIES--IT RETURNS AN ITERATOR WITH [VALUE,VALUE] PAIRS FORM SET.
+        // const alpha2 = new Set(['a', 'b', 'c', 'd', 'e']);
+        // const iterator = alpha2.entries();
+        // let text = "";
+        // for (let x of iterator) {
+        //     text += x + "<br>";
+        // }
+        // document.getElementById("demo").innerHTML = text;
+
+        //=====MAP
+        //1)GET-Get the values for an key in a map.
+        //2)SET-Set the values for an key in a map.
+        //3)DELETE-Delete the map element.
+        //4)CLEAR-Clear all the map elements.
+        //5)HAS-True/False
+
+
+
+        // const children = new Map([["aashvi", 17], ["ayan", 22], ["ganu", 17]]);
+        // document.getElementById("demo").innerHTML = children.get("aashvi");
+
+        // const girls = new Map();
+        // girls.set("aashvi", 17);
+        // girls.set("charvi", 14);
+        // girls.set("nirali", 21);
+
+
+        // document.getElementById("demo").innerHTML = girls.delete("charvi");
+        // document.getElementById("demo").innerHTML == girls.clear();
+        // document.getElementById("demo").innerHTML = girls.size;
+        // document.getElementById("demo").innerHTML = girls.has("charvi");
+
+        //=====ARRAY
+        // const user = ['a', 'b', 'c', 'd', 'e', 'f', ' 2', 5, 4];
+        // document.getElementById("demo").innerHTML = JSON.stringify(user);
+    </script>
+</body>
+
+</html>

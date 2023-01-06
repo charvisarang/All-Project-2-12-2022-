@@ -1,0 +1,41 @@
+<p>user-form works!</p>
+<form [formGroup]="userForm" (ngSubmit)="onSub()">
+    <div class="mb-3">
+        <label for="name" class="form-label">Enter Name</label>
+        <input type="text" class="form-control" id="name" formControlName="name">
+        <div
+            *ngIf="userForm.controls['name'].invalid && (isSubmitted ||  userForm.controls['name'].touched || userForm.controls['name'].dirty)">
+            <p class="text-danger" *ngIf="userForm.controls['name'].errors?.['required']">Please Fill This Field</p>
+            <p class="text-danger" *ngIf="userForm.controls['name'].errors?.['pattern']">Only Alphabets</p>
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <label for="email" class="form-label">Enter Email</label>
+        <input type="email" class="form-control" id="email" formControlName="email">
+
+        <div
+            *ngIf="userForm.controls['email'].invalid && (isSubmitted || userForm.controls['email'].touched || userForm.controls['email'].dirty)">
+            <p class="text-danger" *ngIf="userForm.controls['email'].errors?.['required']">Please Fill This Field
+            </p>
+            <!-- <p class="text-danger" *ngIf="userForm.controls['email'].errors?.['']">Write Proper Way</p> -->
+        </div>
+    </div>
+
+
+    <div class="mb-3">
+        <label for="age" class="form-label">Enter Age</label>
+        <input type="text" class="form-control" id="age" formControlName="age">
+        <div
+            *ngIf="userForm.controls['age'].invalid && (isSubmitted || userForm.controls['age'].touched || userForm.controls['age'].dirty)">
+            <p class="text-danger" *ngIf="userForm.controls['age'].errors?.['required']">Please Fill This Field
+            </p>
+            <p class="text-danger" *ngIf="userForm.controls['age'].errors?.['pattern']">Write Proper Way</p>
+            <p class="text-danger" *ngIf="userForm.controls['age'].errors?.['minlength']">Only 5 digit</p>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
+
+<app-user-list [data]="data1" (newchanges)="onEdit($event)"></app-user-list>

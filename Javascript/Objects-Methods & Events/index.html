@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var a = { rollno: 14, name: 'charvi', add: 'zai' }
+        // console.log(a);//{rollno: 14, name: 'charvi', add: 'zai'}
+        // console.log(a.rollno);//14
+        // a.rollno=24;
+        // console.log(a.rollno);
+        // console.log(a);//{rollno: 24, name: 'charvi', add: 'zai'}
+
+
+        // const sub = { subjects: 'maths', std: "8th" }
+        // const marks = { score: 70 }
+        // const school = { place: "bordi" }
+        // const result = Object.assign(sub, marks, school);
+        // console.log(result);//{subjects: 'maths', score: 70}
+
+        // var a={rollno:14,name:'charvi',add:'zai'}
+        // console.log(Object.keys(a));
+        // console.log(Object.values(a));
+        //    console.log(Object.hasOwn(a,'city'));//false -Work with key
+        //    console.log(Object.hasOwn(a,'add'));//false
+
+
+
+        //================Freeze
+        // var b={
+        //         name : 'hello',
+        //         id:1
+        //     }
+        //     // console.log(b);
+        //     Object.freeze(b);//freeze atle value change kre te pan ni java lai
+        //     b.name = 'charvi';
+        //     b.id = 2;
+        //     console.log(b.name);
+        //     console.log(b.id);
+
+        //===================Seal
+        // var c={
+        //         name : 'hello',
+        //         add:"zai"
+        //     }
+        //     Object.seal(c);
+        //     c.name = 'charvi';
+        //     c.add="kbr ni ka te"
+        //     console.log(c.name);
+        //     console.log(c.add);
+
+        // console.log(Object.isFrozen(c));
+        // console.log(Object.isFrozen(c));
+
+        // ===============================Define Property
+        // var a = { rollno: 14, name: 'charvi', add: 'zai' }
+        // Object.defineProperty(a, 'sr_no', {
+        //     value: 1,
+        //     writable: true
+        // });
+        // console.log(a.sr_no)
+        // a.id = 4;
+        // console.log(a.sr);
+
+
+        // =====================================Define Properties
+        // Object.defineProperties(a, {
+        //     city: {
+        //         value: 'Navsari',
+        //         writable: true
+        //     },
+        //     bGroup: {
+        //         value: 'O+',
+        //         writable: false
+        //     }
+        // });
+        // console.log(a.city)
+
+
+        // =====================================Stringify
+        // var doublequotes = JSON.stringify(a);
+        // console.log(doublequotes);
+        // var lineperlavinakhe = JSON.parse(doublequotes);
+        // console.log(lineperlavinakhe);
+    </script>
+
+    <!-- NAVIGATION OBJECT -->
+    <!-- <script>
+        let a, b, c;
+        a = document.write("Name=" + navigator.appCodeName + "<br>");
+        b = document.write("Code Name=" + navigator.appCodeName + "<br>");
+        c = document.write("Version=" + navigator.appVersion);
+    </script> -->
+
+
+    <!-- WINDOW OBJECT -->
+    <!-- Page no-43 (2022)-->
+    <!-- <script>
+        function openWindow() {
+            var w = window.open();
+            // w.document.bgColor = "red;"
+            w.document.write("<h1>Welcome to world of Javascript</h1>");
+            w.document.body.style.background = "yellow";
+            w.document.body.style.color = "pink";
+            w.document.body.style.fontSize = 35;
+        }
+    </script>
+    <button onclick="openWindow()">Click Me</button> -->
+
+    <!-- Page no-43 (2022)- -->
+    <!-- <script>
+        function openWindow() {
+            window.setTimeout(next(), 4000);
+        }
+        function next() {
+            document.write("<p>This is P</p>");
+        }
+    </script>
+    <input type="button" onclick="openWindow()" value="Open Me"> -->
+
+    <!-- =============================================================================================ALERT -->
+    <!-- <script>
+        function msg() {
+            alert("Hello Alert Box");
+        }  
+    </script>
+    <input type="button" value="click" onclick="msg()" /> -->
+
+    <!-- =============================================================================================CLOSE -->
+    <!-- <script>
+        function close() {
+            var w = window.close();
+        }
+    </script>
+    <button onclick="close()">Click Me</button> -->
+
+    <!-- =============================================================================================CONFIRM -->
+    <!-- <script>
+        function Confirm() {
+            document.write("<p>Para</p>");
+            var w = window.confirm();
+            document.body.style.background = "red";
+            document.body.style.color = "yellow";
+        }
+    </script>
+    <button onclick="Confirm()">Click me</button> -->
+
+    <!-- =============================================================================================FOCUS -->
+    <!-- <script>
+        function Focus() {
+            var w = window.focus();
+        }
+    </script>
+    <button onclick="Focus()">Click me</button> -->
+    <!-- ==============================================================================================PRINT -->
+    <!-- <script>
+        function Print() {
+            var w = window.print();
+        }
+    </script>
+    <input type="button" value="Print" onclick="Print()"> -->
+    <!-- ==============================================================================================PROMPT -->
+    <!-- <script>
+        function Prompt() {
+            var w = window.prompt();
+        }
+    </script>
+    <button onclick="Prompt()">Click me</button> -->
+    <!-- ==============================================================================================SETTIMEOUT -->
+
+    <!-- <script>
+
+        var a;
+        a = setTimeout(fun, 5000);
+        // function clickme() {
+        //     window.setTimeout(fun, 5000);
+        // }
+        function fun() {
+            alert(" Welcome to the javaTpoint.com ");
+            document.write("Hello");
+            document.body.style.color = "red";
+        }  
+    </script> -->
+    <!-- <button onclick="clickme()">click me</button>
+
+ <!============================================================================================================MOUSEEVENTS -->
+
+    <!-- <script>
+        function mOver() {
+            document.bgColor = "yellow";
+            // document.write("Hello");
+        }
+        function mOut() {
+            document.bgColor = "blue";
+        }
+
+        function mDown() {
+            document.bgColor = "pink";
+        }
+        function mUp() {
+            document.bgColor = "orange";
+        }
+
+    </script>
+    <input type="button" onmouseover="mOver()" onmouseout="mOut()" onmousedown="mDown()" onmouseup="mUp()"
+        value="mouse action here"> -->
+
+    <!-- ====================================================================================================KEYEVENTS -->
+    <!-- <script language="javascript">
+        function down() {
+            document.bgColor = "yellow";
+        }
+        function press() {
+            document.bgColor = "blue";
+        }
+
+        function up() {
+            document.bgColor = "pink";
+        }
+    </script> -->
+    <!-- <input type="button" onkeydown="down()" onkeypress="press()" onkeyup="up()" value="action here"> -->
+
+</body>
+
+</html>

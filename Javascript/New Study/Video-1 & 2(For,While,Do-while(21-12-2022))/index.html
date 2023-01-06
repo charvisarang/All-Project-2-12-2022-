@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- ===============================================================================BREAK -->
+    <!-- <script>
+        for (var i = 1; i <= 10; i++) {
+            if (i == 5) {
+                break;
+            }
+            document.write(i + "<br>");
+        }
+    </script> -->
+    <!-- ===============================================================================CONTINUE -->
+    <!-- <script>
+        for (let i = 0; i <= 10; i++) {
+            if (i == 4)
+                continue;
+            document.write(i + "<br>");
+        }
+    </script> -->
+    <!-- ===============================================================================FOR LOOP -->
+    <!-- <script>
+        for (let i = 0; i <= 10; i++) {
+            document.write(i + "<br>");
+        }
+    </script> -->
+    <!-- ===============================================================================WHILE LOOP -->
+    <!-- <script>
+        let i = 0;
+        while (i <= 10) {
+            i++;
+            document.write(i + "<br>");
+        }
+    </script> -->
+    <!-- ===============================================================================DO WHILE LOOP -->
+    <!-- <script>
+        let i = 0;
+        do {
+            document.write(i + "<br>");
+            i++;
+        }
+        while (i <= 10)
+    </script> -->
+    <!-- ============================================================================NORMAL ID -->
+    <!-- <p id="demo">Paragraph</p>
+    <script>
+        document.getElementById("demo").innerHTML = "PARAGRAPH";
+    </script> -->
+
+    <!-- ============================================================================MULTIPLE CLASS -->
+    <!-- <ul>
+        <li class="a">List 1</li>
+        <li class="b">List 2</li>
+        <li class="c">List 3</li>
+        <li class="c">List 4</li>
+        <li>List 5</li>
+    </ul>
+    <script>
+        let a = document.getElementsByClassName("c");
+        for (i = 0; i < a.length; i++) {
+            a[i].innerHTML = "List C";
+        }
+    </script> -->
+
+    <!-- ============================================================================QUERY SELECTORS -->
+    <!-- <div>
+        <h2 class="intro">Heading 2</h2>
+        <p class="intro">Paragraph</p>
+        <p class="intro">Paragraph</p>
+    </div>
+    <p class="intro">Paragraph</p>
+
+    <script>
+        let a = document.querySelectorAll("p.intro");
+        for (i = 0; i < a.length; i++) {
+            a[i].innerHTML = "Hiii";
+        }
+    </script> -->
+
+    <!-- ============================================================================TRAVERSING ELEMENT -->
+    <!-- Parent To Child -->
+    <!-- <ul id="menu">
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+        <li>D</li>
+    </ul>
+    <script>
+        let a = document.getElementById("menu");
+        console.log(a);
+        // let childfirst = a.firstElementChild;
+        // child.innerHTML = "I am First Child";
+        let childmiddle = a.firstElementChild.nextElementSibling;
+        childmiddle.innerHTML = "I am Middle Child";
+        // let childlast = a.lastElementChild;
+        // childlast.innerHTML = "I am Last Child";
+    </script> -->
+
+
+    <!--Child To Parent-->
+    <!-- <ul>
+        <li id="menu">A</li>
+        <li>B</li>
+        <li>C</li>
+        <li>D</li>
+    </ul>
+    <script>
+        let a = document.getElementById("menu");
+        console.log(a);
+        let parent = a.parentElement;
+        parent.innerHTML = "Hii";
+    </script> -->
+
+    <!--ALL CHILDREN-->
+    <!-- <script>
+        let b = document.getElementById("menu");
+        console.log(b);
+        let child = b.children;
+        console.log(child);
+    </script> -->
+
+    <!-- ============================================================================CLONE -->
+    <!-- <ul id="menu">
+        <li>Home</li>
+        <li>About Us</li>
+        <li>Product</li>
+    </ul>
+
+    <script>
+        let a = document.getElementById("menu");
+        console.log(a);
+        let copy = a.cloneNode(true);
+        document.body.appendChild(copy);
+    </script> -->
+
+    <!-- ============================================================================APPEND CHILD(Create new element) -->
+
+    <!-- <ul id="menu">
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+        <li>D</li>
+    </ul> -->
+    <!-- <script>
+        let a = document.getElementById("menu");
+        console.log(a);
+        let newlist = document.createElement("li");
+        newlist.textContent = "E";
+        a.appendChild(newlist);
+    </script>  -->
+
+    <!-- <script>
+        let a = document.getElementById("menu");
+        console.log(a);
+        let newlist = document.createElement("li");
+        let text = document.createTextNode("E");
+        newlist.append(text);
+        a.append(newlist);
+    </script> -->
+
+    <!-- REMOVE -->
+    <!-- <script>
+        let a = document.getElementById("menu");
+        console.log(a);
+        document.body.remove(a);
+    </script> -->
+
+    <!-- REMOVE(Particular 1 element) -->
+    <!-- <script>
+        let a = document.getElementById("menu");
+        console.log(a);
+        let child = a.firstElementChild;
+        a.removeChild(child)
+    </script> -->
+</body>
+
+</html>

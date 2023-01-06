@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        header {
+            width: 100%;
+            height: auto;
+            text-align: center;
+        }
+
+        h1 {
+            text-decoration: underline;
+            text-transform: uppercase;
+        }
+
+        .profileimg {
+            width: 25%;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        ul {
+            background-color: rgb(239, 16, 109);
+            text-align: center;
+        }
+
+        li {
+            padding: 10px;
+            font-size: 25px;
+            color: white;
+            list-style-type: none;
+            display: inline-block;
+        }
+
+        p {
+            text-align: justify;
+            font-size: 25px;
+        }
+
+        #colors {
+            background-color: orange;
+            text-align: right;
+        }
+
+        .btn {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            cursor: pointer;
+            padding: 10px;
+            margin: 5px;
+            border: 2px solid black;
+        }
+
+        #white {
+            background-color: white;
+        }
+
+        #red {
+            background-color: red;
+        }
+
+        #black {
+            background-color: black;
+        }
+
+        #yellow {
+            background-color: yellow;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>About us</h1>
+            <img src="assets/images/stock-photo-159358357.jpg" class="profileimg" alt="">
+        </header>
+        <ul id="menu">
+            <li>Home</li>
+            <li>About us</li>
+            <li>Registration</li>
+            <li>Advice</li>
+            <li>Help</li>
+        </ul>
+
+        <div id="colors">
+            <span class="btn" id="white" onclick="changeColors('white')"></span>
+            <span class="btn" id="red" onclick="changeColors('red')"></span>
+            <span class="btn" id="black" onclick="changeColors('black')"></span>
+            <span class="btn" id="yellow" onclick="changeColors('yellow')"></span>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque ea nesciunt quo reiciendis optio dignissimos
+            alias, rem perspiciatis molestias reprehenderit cum est molestiae voluptates expedita, nisi, a possimus
+            veritatis quibusdam.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dicta architecto, facere excepturi ea, aliquam
+            eveniet quo nulla aperiam sit commodi corporis! Porro incidunt accusamus, aspernatur culpa minima maxime
+            quam.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro earum accusamus amet facilis iusto
+            provident, cumque aliquam placeat debitis. Eaque, qui dolore? Tempora numquam exercitationem dolor porro
+            aspernatur incidunt minima!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem et quaerat, suscipit numquam in dolore
+            perspiciatis iste. Ut consectetur facere blanditiis, praesentium minima asperiores saepe, voluptate aliquam
+            porro cumque quia!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ipsa, quos omnis dolores doloremque et, nulla
+            saepe at necessitatibus magnam vel nisi, perferendis eius commodi quisquam porro eligendi dignissimos quia.
+        </p>
+
+        <img src="assets/images/stock-photo-159358357.jpg" alt="">
+    </div>
+    <script>
+        function changeColors(colors) {
+            document.body.style.backgroundColor = colors;
+            if (colors == 'black') {
+                document.body.style.color = 'white';
+            }
+            else {
+                document.body.style.color = 'black';
+            }
+        }
+
+        window.addEventListener("scroll", function () {
+            let ul = document.getElementById("menu");
+            if (window.pageYOffset >= 236) {
+                ul.classList.add('sticky');
+            }
+            else {
+                ul.classList.remove('sticky');
+            }
+        });
+    </script>
+</body>
+
+</html>

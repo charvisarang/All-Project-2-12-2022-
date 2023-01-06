@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- ========================================================================================= AREA OF CIRCLE -->
+    <!-- <script>
+        function onCircle() {
+            let r = document.getElementById("no").value;
+            const pi = 3.14;
+            var result = pi * r * r;
+            document.getElementById("demo").innerHTML = `Area of circle is ${result}`;
+        }
+    </script>
+    <input type="text" name="no" id="no">
+    <button onclick="onCircle()">Try It</button>
+    <p id="demo"></p> -->
+
+
+
+    <!-- <p id="demo"></p>
+    <script>
+        function myCircle() {
+            var r = parseInt(prompt("enter the no"));
+            const pi = 3.14;
+            var result = pi * r * r;
+            document.getElementById("demo").innerHTML = `Area of circle is ${result}`;
+        } myCircle();
+    </script> -->
+
+
+
+    <!-- ========================================================================================= AREA OF SQUARE -->
+
+    <!-- <input type="text" name="side" id="side">
+    <button onclick="mySquare()">Try It</button>
+    <script>
+        function mySquare() {
+            let a = document.getElementById("side").value;
+            var result = 4 * a;
+            document.getElementById("demo").innerHTML = `Area of Square is ${result}`;
+        }
+    </script>
+    <p id="demo"></p> -->
+
+    <!-- ========================================================================================= AREA OF TRIANGLE -->
+    <!-- Enter base:<input type="text" name="base" id="base">
+    Enter height:<input type="text" name="height" id="height">
+    <button onclick="onTriangle()">Try It</button>
+    <p id="demo"></p>
+    <script>
+        function onTriangle() {
+            let base = document.getElementById("base").value;
+            let height = document.getElementById("height").value;
+            var result = 1 / 2 * base * height;
+            document.getElementById("demo").innerHTML = `Area of Triangle is ${result}`;;
+        }
+    </script> -->
+
+    <!-- ========================================================================================= EVEN AND ODD -->
+    <!-- <input type="text" id="no">
+    <button onclick="onCheck()">Try It</button>
+    <p id="demo"></p>
+    <script>
+        function onCheck() {
+            let no = document.getElementById("no").value;
+            if (no % 2 == 0) {
+                document.getElementById("demo").innerHTML = "Even No";
+            }
+            else {
+                document.getElementById("demo").innerHTML = "Odd No";
+            }
+        }
+    </script> -->
+
+    <!-- ========================================================================================= POSITIVE AND NEGATIVE -->
+    <!-- <input type="text" name="no" id="no">
+    <button onclick="onCheck()">Try It</button>
+    <p id="demo"></p>
+    <script>
+        function onCheck() {
+            let no = document.getElementById("no").value;
+            if (no > 0) {
+                document.getElementById("demo").innerHTML = "Positive No";
+            }
+            else if (no < 0) {
+                document.getElementById("demo").innerHTML = "Negative No";
+            }
+            else {
+                document.getElementById("demo").innerHTML = "No is zero";
+            }
+        }
+    </script> -->
+
+    <!-- ========================================================================================= PRIME NUMBER -->
+    <!-- <input type="text" name="no" id="no">
+    <button onclick="myFun()">Try It</button>
+    <p id="demo"></p>
+    <script>
+        function myFun() {
+            var no = document.getElementById("no").value;
+            if (no == 1) {
+                document.getElementById("demo").innerHTML = "Not Prime";
+            }
+            else if (no < 1) {
+                document.getElementById("demo").innerHTML = "Not Prime";
+            }
+            else {
+                for (var i = 2; i < no; i++) {
+                    if (no % i == 0) {
+                        var res = `${no} This is not prime no`;
+                        break;
+                    }
+                    else {
+                        var res = `${no} This is prime no`;
+                    }
+                }
+            }
+            document.getElementById("demo").innerHTML = res;
+        }
+    </script> -->
+
+    <!-- <input type="text" name="no" id="no">
+    <button onclick="onCheck()">Try It</button>
+    <p id="demo"></p>
+    <script>
+        function onCheck() {
+            var no = document.getElementById("demo").value;
+            if (no == 1) {
+                document.getElementById("demo").innerHTML = "Not Prime No";
+            }
+            else if (no < 1) {
+                document.getElementById("demo").innerHTML = "Not Prime No";
+            }
+            else {
+                for (var i = 2; i < no; i++) {
+                    if (no % i == 0) {
+                        var res = "Not Prime No";
+                        break;
+                    }
+                    else {
+                        var res = "Prime No";
+                    }
+                }
+                console.log(res);
+            }
+        }
+    </script> -->
+
+
+    <!-- <p id="demo"></p>
+    <script>
+        const no = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        var result = no.filter(no => {
+            for (var i = 2; i <= Math.sqrt(no); i++) {
+                if (no % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+        });
+        console.log(result);
+    </script> -->
+
+
+
+
+
+
+    <!-- ========================================================================================= F TO C -->
+    <!-- <input type="text" id="f">
+    <button onclick="onCheck()">Try It</button>
+    <p id="demo"></p>
+    <script>
+        function onCheck() {
+            let f = document.getElementById("f").value;
+            var result = (f - 32) * 5 / 9;
+            document.getElementById("demo").innerHTML = result;
+        }
+    </script> -->
+
+
+    <!-- <p id="demo"></p>
+    <script>
+        let a = function (f) {
+            return (f - 32) * 5 / 9;
+        }
+        document.getElementById("demo").innerHTML = `Value is ${a(77)}`;
+    </script> -->
+
+
+
+    <!-- ========================================================================================= C TO  F -->
+    <!-- <input type="text" name="no" id="c">
+    <button onclick="onCheck()">Try It</button>
+    <p id="demo"></p>
+    <script>
+        function onCheck() {
+            var c = document.getElementById("c").value;
+            var result = (c * (9 / 5) + 32);
+            document.getElementById("demo").innerHTML = result;
+        }
+    </script> -->
+
+
+
+    <!-- <p id="demo"></p>
+    <script>
+        let a = function (c) {
+            return (c * (9 / 5) + 32);
+        }
+        document.getElementById("demo").innerHTML = `Value is ${a(5)}`;
+    </script> -->
+
+    <!-- ========================================================================================= SWAPPING -->
+    <!-- 2 variables -->
+    <!-- <script>
+        let a;
+        let b;
+        [a, b] = [1, 2, 3]
+        console.log(a);//1
+        console.log(b);//2
+    </script> -->
+
+    <!-- 
+    <script>
+        let a = 2;
+        let b = 0;
+        [a, b] = [b, a];
+        console.log(a);
+        console.log(b);
+    </script> -->
+
+    <!-- <script>
+        let a = 6;
+        let b = 7;
+        a = a + b;//6+7=13
+        b = a - b;//13-7=6
+        a = a - b;//13-6=7
+        console.log(a);//7
+        console.log(b);//6
+    </script> -->
+
+
+    <!-- <script>
+        let a = 8;
+        let b = 2;
+        a = a * b;//8*2=16
+        b = a / b;//16/2=8
+        a = a / b;//16/8=2
+        console.log(a);//2
+        console.log(b);//8
+    </script> -->
+
+    <!-- <script>
+        let a = 4;
+        let b = 1;
+        a = a ^ b;
+        b = a ^ b;
+        a = a ^ b;
+        console.log(a);
+        console.log(b);
+    </script> -->
+
+    <!-- 3 variables -->
+    <!-- <script>
+        let a = 3;
+        let b = 4;
+        let temp;
+        temp = a;//3
+        a = b;//4
+        b = temp;//3
+        console.log(temp);//3
+        console.log(a);//4
+        console.log(b);//3
+    </script> -->
+</body>
+
+</html>

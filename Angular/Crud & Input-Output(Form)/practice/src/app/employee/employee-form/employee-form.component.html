@@ -1,0 +1,53 @@
+<button (click)="onUser()">Go to User</button>
+<div class="container">
+    <form [formGroup]="mainForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label for="name" class="form-label">Enter Name</label>
+            <input type="text" class="form-control" id="name" formControlName="name">
+            <div
+                *ngIf="mainForm.controls['name'].invalid && (isSubmitted ||  mainForm.controls['name'].touched || mainForm.controls['name'].dirty)">
+                <p class="text-danger" *ngIf="mainForm.controls['name'].errors?.['required']">Please Fill This Field</p>
+                <p class="text-danger" *ngIf="mainForm.controls['name'].errors?.['pattern']">Only Alphabets</p>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">Enter Email</label>
+            <input type="email" class="form-control" id="email" formControlName="email">
+
+            <div
+                *ngIf="mainForm.controls['email'].invalid && (isSubmitted || mainForm.controls['email'].touched || mainForm.controls['email'].dirty)">
+                <p class="text-danger" *ngIf="mainForm.controls['email'].errors?.['required']">Please Fill This Field
+                </p>
+                <!-- <p class="text-danger" *ngIf="mainForm.controls['email'].errors?.['']">Write Proper Way</p> -->
+            </div>
+        </div>
+
+
+        <div class="mb-3">
+            <label for="age" class="form-label">Enter Age</label>
+            <input type="text" class="form-control" id="age" formControlName="age">
+            <!-- <div
+                *ngIf="mainForm.controls['age'].invalid && (isSubmitted || mainForm.controls['age'].touched || mainForm.controls['age'].dirty)">
+                <p class="text-danger" *ngIf="mainForm.controls['age'].errors?.['required']">Please Fill This Field
+                </p>
+                <p class="text-danger" *ngIf="mainForm.controls['age'].errors?.['pattern']">Write Proper Way</p>
+                <p class="text-danger" *ngIf="mainForm.controls['age'].errors?.['minlength']">Only 5 digit</p>
+            </div> -->
+            <div
+                *ngIf="mainForm.controls['age'].invalid && (isSubmitted || mainForm.controls['age'].touched || mainForm.controls['age'].dirty)">
+                <p *ngIf="mainForm.controls['name'].errors?.['required']">This input is required</p>
+                <p *ngIf="mainForm.controls['name'].errors?.['minlength']">Only digits</p>
+            </div>
+        </div>
+
+
+
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" (click)="onReset()">Reset</button>
+
+    </form>
+</div>
+
+<app-employee-list></app-employee-list>
